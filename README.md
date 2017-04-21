@@ -1,4 +1,4 @@
-# cwic
+# CWIC
 An event management app for the "Chili When Its Chilly" cook-off. Supporting Veterans through the ReBoot Program with the Boot Campaign
 Reboot - For brain injury and suicide prevention
 Boot Campaign Charity
