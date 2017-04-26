@@ -3,7 +3,10 @@ An event management app for the "Chili When Its Chilly" cook-off. Supporting Vet
 Reboot - For brain injury and suicide prevention
 Boot Campaign Charity
 
+# Links
+http://www.bootcampaign.org/about/
 
+https://www.chiliwhenitschilly.com/
 
 # Other Notes
 - See movie 'Lone Survivor'. Marcus Latrell Morgan started Reboot
