@@ -16,7 +16,6 @@ enum EventActivityType {
     case concert  // Artist should be able to make a concert, and include it in events page
     case cookoff  // TODO: needs most thought, include recipes,
     case raffle   // Users can buy raffle tickets through the app
-    case users    // Want to see where friends are
   }
   
   
@@ -29,6 +28,7 @@ enum EventActivityType {
     case parking
     case puttPutt
     case swimmingPool
+    case users        // Want to see where friends are
     case waterSlide
   }
 }
