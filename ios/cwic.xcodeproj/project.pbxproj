@@ -11,10 +11,11 @@
 		CD5921B71EF287DB0004B77B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5921B61EF287DB0004B77B /* RootViewController.swift */; };
 		CD5921BA1EF289630004B77B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5921B91EF289630004B77B /* RegisterViewController.swift */; };
 		CD5921BC1EF289950004B77B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5921BB1EF289950004B77B /* User.swift */; };
+		CD5921BE1EF295290004B77B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5921BD1EF295290004B77B /* ProfileViewController.swift */; };
 		CD6FDB1F1EF1D64B00C16CB5 /* SponsorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB1E1EF1D64B00C16CB5 /* SponsorViewController.swift */; };
 		CD6FDB211EF1D66700C16CB5 /* SponsorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB201EF1D66700C16CB5 /* SponsorTableViewController.swift */; };
-		CD6FDB231EF1D67E00C16CB5 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB221EF1D67E00C16CB5 /* EventTableViewController.swift */; };
-		CD6FDB251EF1D68900C16CB5 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB241EF1D68900C16CB5 /* EventViewController.swift */; };
+		CD6FDB231EF1D67E00C16CB5 /* EventActivityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB221EF1D67E00C16CB5 /* EventActivityListViewController.swift */; };
+		CD6FDB251EF1D68900C16CB5 /* EventActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB241EF1D68900C16CB5 /* EventActivityViewController.swift */; };
 		CD6FDB271EF1D69400C16CB5 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB261EF1D69400C16CB5 /* FeedbackViewController.swift */; };
 		CD6FDB291EF1D6A900C16CB5 /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB281EF1D6A900C16CB5 /* Sponsor.swift */; };
 		CD6FDB2B1EF1D6B400C16CB5 /* EventActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB2A1EF1D6B400C16CB5 /* EventActivity.swift */; };
@@ -36,10 +37,11 @@
 		CD5921B61EF287DB0004B77B /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = Source/RootViewController.swift; sourceTree = SOURCE_ROOT; };
 		CD5921B91EF289630004B77B /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = Source/RegisterViewController.swift; sourceTree = SOURCE_ROOT; };
 		CD5921BB1EF289950004B77B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Source/User.swift; sourceTree = SOURCE_ROOT; };
+		CD5921BD1EF295290004B77B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Source/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		CD6FDB1E1EF1D64B00C16CB5 /* SponsorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SponsorViewController.swift; path = Source/SponsorViewController.swift; sourceTree = SOURCE_ROOT; };
 		CD6FDB201EF1D66700C16CB5 /* SponsorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SponsorTableViewController.swift; path = Source/SponsorTableViewController.swift; sourceTree = SOURCE_ROOT; };
-		CD6FDB221EF1D67E00C16CB5 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventTableViewController.swift; path = Source/EventTableViewController.swift; sourceTree = SOURCE_ROOT; };
-		CD6FDB241EF1D68900C16CB5 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventViewController.swift; path = Source/EventViewController.swift; sourceTree = SOURCE_ROOT; };
+		CD6FDB221EF1D67E00C16CB5 /* EventActivityListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventActivityListViewController.swift; path = Source/EventActivityListViewController.swift; sourceTree = SOURCE_ROOT; };
+		CD6FDB241EF1D68900C16CB5 /* EventActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventActivityViewController.swift; path = Source/EventActivityViewController.swift; sourceTree = SOURCE_ROOT; };
 		CD6FDB261EF1D69400C16CB5 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedbackViewController.swift; path = Source/FeedbackViewController.swift; sourceTree = SOURCE_ROOT; };
 		CD6FDB281EF1D6A900C16CB5 /* Sponsor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sponsor.swift; path = Source/Sponsor.swift; sourceTree = SOURCE_ROOT; };
 		CD6FDB2A1EF1D6B400C16CB5 /* EventActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventActivity.swift; path = Source/EventActivity.swift; sourceTree = SOURCE_ROOT; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				CD6FDB191EF1D23000C16CB5 /* Sponsor */,
+				CD5921BD1EF295290004B77B /* ProfileViewController.swift */,
 				CD5921B91EF289630004B77B /* RegisterViewController.swift */,
 				CD5921BB1EF289950004B77B /* User.swift */,
 			);
@@ -160,8 +163,8 @@
 			children = (
 				CD6FDB131EF1D1E900C16CB5 /* Auction */,
 				CD6FDB2A1EF1D6B400C16CB5 /* EventActivity.swift */,
-				CD6FDB221EF1D67E00C16CB5 /* EventTableViewController.swift */,
-				CD6FDB241EF1D68900C16CB5 /* EventViewController.swift */,
+				CD6FDB221EF1D67E00C16CB5 /* EventActivityListViewController.swift */,
+				CD6FDB241EF1D68900C16CB5 /* EventActivityViewController.swift */,
 			);
 			name = Event;
 			sourceTree = "<group>";
@@ -317,13 +320,14 @@
 				CD6FDB271EF1D69400C16CB5 /* FeedbackViewController.swift in Sources */,
 				CD6FDB2F1EF1D6D100C16CB5 /* RecipeViewController.swift in Sources */,
 				CD6FDB291EF1D6A900C16CB5 /* Sponsor.swift in Sources */,
+				CD5921BE1EF295290004B77B /* ProfileViewController.swift in Sources */,
 				CDF3F9951EB08A5300305DF4 /* AppDelegate.swift in Sources */,
-				CD6FDB231EF1D67E00C16CB5 /* EventTableViewController.swift in Sources */,
+				CD6FDB231EF1D67E00C16CB5 /* EventActivityListViewController.swift in Sources */,
 				CD5921BC1EF289950004B77B /* User.swift in Sources */,
 				CD6FDB311EF1D6DA00C16CB5 /* RecipeTableViewController.swift in Sources */,
 				CD5921BA1EF289630004B77B /* RegisterViewController.swift in Sources */,
 				CD5921B71EF287DB0004B77B /* RootViewController.swift in Sources */,
-				CD6FDB251EF1D68900C16CB5 /* EventViewController.swift in Sources */,
+				CD6FDB251EF1D68900C16CB5 /* EventActivityViewController.swift in Sources */,
 				CD6FDB331EF1D6F800C16CB5 /* AboutViewController.swift in Sources */,
 				CD6FDB2D1EF1D6C800C16CB5 /* Recipe.swift in Sources */,
 			);
