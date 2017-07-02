@@ -21,6 +21,7 @@
 		CD67252F1F08AD5F00680250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD67252E1F08AD5F00680250 /* Assets.xcassets */; };
 		CD6725311F08ADF200680250 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6725301F08ADF200680250 /* UINavigationController.swift */; };
 		CD6725351F08BD1B00680250 /* UITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6725341F08BD1B00680250 /* UITabBarController.swift */; };
+		CD6725371F08C47F00680250 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6725361F08C47F00680250 /* Action.swift */; };
 		CD6FDB211EF1D66700C16CB5 /* SponsorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB201EF1D66700C16CB5 /* SponsorListViewController.swift */; };
 		CD6FDB231EF1D67E00C16CB5 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB221EF1D67E00C16CB5 /* EventListViewController.swift */; };
 		CD6FDB251EF1D68900C16CB5 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB241EF1D68900C16CB5 /* EventViewController.swift */; };
@@ -49,6 +50,7 @@
 		CD67252E1F08AD5F00680250 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Source/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		CD6725301F08ADF200680250 /* UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UINavigationController.swift; path = Source/UINavigationController.swift; sourceTree = SOURCE_ROOT; };
 		CD6725341F08BD1B00680250 /* UITabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITabBarController.swift; path = Source/UITabBarController.swift; sourceTree = SOURCE_ROOT; };
+		CD6725361F08C47F00680250 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Action.swift; path = Source/Action.swift; sourceTree = SOURCE_ROOT; };
 		CD6FDB201EF1D66700C16CB5 /* SponsorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SponsorListViewController.swift; path = Source/SponsorListViewController.swift; sourceTree = SOURCE_ROOT; };
 		CD6FDB221EF1D67E00C16CB5 /* EventListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventListViewController.swift; path = Source/EventListViewController.swift; sourceTree = SOURCE_ROOT; };
 		CD6FDB241EF1D68900C16CB5 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventViewController.swift; path = Source/EventViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -128,6 +130,7 @@
 		CD1D70F31EB088BE007C80CE /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				CD6725361F08C47F00680250 /* Action.swift */,
 				CDF3F9911EB08A5300305DF4 /* AppDelegate.swift */,
 				CD5921B81EF2894C0004B77B /* Account */,
 				CD6FDB181EF1D21D00C16CB5 /* Event */,
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD0F77101EFA78790091BD0C /* String.swift in Sources */,
+				CD6725371F08C47F00680250 /* Action.swift in Sources */,
 				CD6FDB211EF1D66700C16CB5 /* SponsorListViewController.swift in Sources */,
 				CD6FDB2B1EF1D6B400C16CB5 /* Event.swift in Sources */,
 				CD0F77111EFA78790091BD0C /* UIAlertController.swift in Sources */,

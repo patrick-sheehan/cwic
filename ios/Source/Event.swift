@@ -50,6 +50,15 @@ class Event: CustomStringConvertible {
     self.date = date
   }
   
+  var actions: [Action] {
+    return [
+    
+    
+    
+    
+    ]
+  }
+  
 }
 
 extension Event {

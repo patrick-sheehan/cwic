@@ -28,9 +28,6 @@ class Sponsor: User {
   var event: Event {
     return Event(.sponsor, object: self)
   }
-}
-
-extension Sponsor {
   
   static let examples: [Sponsor] = [
     Sponsor("Bill's Hardware"),
@@ -40,5 +37,5 @@ extension Sponsor {
     Sponsor("Oleo Learning Co")
   ]
   
-  static let CwicSponsor: Sponsor = Sponsor("About CWIC")
+  static let CWIC: Sponsor = Sponsor("About CWIC")
 }

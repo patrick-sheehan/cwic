@@ -36,8 +36,6 @@ class EventListViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let vc = UIStoryboard.getViewController(.Event) as! EventViewController
-    vc.event = events[indexPath.row]
-    navigationController?.pushViewController(vc, animated: true)
+    navigationController?.pushViewController(EventViewController.create(event: events[indexPath.row]), animated: true)
   }
 }

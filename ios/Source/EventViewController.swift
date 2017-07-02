@@ -13,7 +13,7 @@ class EventViewController: UIViewController {
   
   // MARK: - Member Variables
   
-  var event: Event?
+  var event: Event!
   
   
   // MARK: - IB Outlets
@@ -28,6 +28,9 @@ class EventViewController: UIViewController {
     super.viewDidLoad()
     
     navigationItem.title = event?.description
+    
+    tableView.dataSource = self
+    tableView.delegate = self
   }
   
   
@@ -35,5 +38,23 @@ class EventViewController: UIViewController {
     let vc = UIStoryboard.getViewController(.Event) as! EventViewController
     vc.event = event
     return vc
+  }
+}
+
+extension EventViewController: UITableViewDataSource, UITableViewDelegate {
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return event.actions.count
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    return tableView.defaultCell(event.actions[indexPath.row])
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let action = event.actions[indexPath.row]
+    showPopupInfo("'\(action)' coming soon!")
+    
+    tableView.deselectRow(at: indexPath, animated: true)
   }
 }

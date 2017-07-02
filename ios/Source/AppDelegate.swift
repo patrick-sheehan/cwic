@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window?.rootViewController = UITabBarController([
       UINavigationController("Profile", .Profile, UIStoryboard.getViewController(.Profile)),
       UINavigationController("Events", .Events, EventListViewController()),
-      UINavigationController("About", .About, EventViewController.create(event: Sponsor.CwicSponsor.event)),
+      UINavigationController("About", .About, EventViewController.create(event: Sponsor.CWIC.event)),
       UINavigationController("Sponsors", .Sponsors, SponsorListViewController())
     ])
     window?.makeKeyAndVisible()

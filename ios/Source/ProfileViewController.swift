@@ -15,13 +15,15 @@ class ProfileViewController: UIViewController {
   @IBOutlet weak var viewTrophiesButton: UIButton!
   @IBOutlet weak var tableView: UITableView!
   
-  var actions: [String] = [
-    "Edit Profile",
-    "My Tickets",
-    "My Pages",
-    "Send Push Notification",
-    "Become a Judge"
-  ]
+  lazy var actions: [Action] = {
+    return [
+      Action("Edit Profile", viewController: self),
+      Action("My Tickets", viewController: self),
+      Action("My Pages", viewController: self),
+      Action("Send Push Notification", viewController: self),
+      Action("Become a Judge", viewController: self)
+    ]
+  }()
   
   override func viewDidLoad() {
     super.viewDidLoad()
