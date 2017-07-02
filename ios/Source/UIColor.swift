@@ -61,13 +61,5 @@ extension UIColor {
   }
   
   
-  @nonobjc static let Greeen = UIColor(netHex: 0x7CC576)
-  @nonobjc static let Red = UIColor(netHex: 0xF26C4F)
-  @nonobjc static let TextFieldBorder = UIColor(netHex: 0xE7E7E7)
-  @nonobjc static let NaviColor = UIColor(netHex: 0xF5F5F5)
-  @nonobjc static let OppenentChatColor = UIColor(netHex: 0xF5F5F5)
-  @nonobjc static let MyChatColor = UIColor(netHex: 0x7CC576)
-  @nonobjc static let ChatActionColor = UIColor(netHex: 0xBABABA)
-  @nonobjc static let ToolbarBackgroundColor = UIColor(netHex: 0xD9D9D9)
   
 }

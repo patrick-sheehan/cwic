@@ -27,19 +27,32 @@ class ProfileViewController: UIViewController {
     super.viewDidLoad()
     
     tableView.dataSource = self
+    tableView.delegate = self
     
     navigationItem.title = "My Profile"
+    
+    viewTrophiesButton.addTarget(self, action: #selector(viewTrophies), for: .touchUpInside)
+  }
+  
+  func viewTrophies() {
+    showPopupInfo("'Trophies' coming soon!")
   }
 }
 
-extension ProfileViewController: UITableViewDataSource {
+extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return actions.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
     return tableView.defaultCell(actions[indexPath.row])
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let action = actions[indexPath.row]
+    showPopupInfo("'\(action)' coming soon!")
+    
+    tableView.deselectRow(at: indexPath, animated: true)
   }
 }

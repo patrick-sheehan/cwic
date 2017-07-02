@@ -14,8 +14,6 @@ extension UITableView {
     
     let cell = dequeueReusableCell(withIdentifier: "Cell") ?? UITableViewCell(style: .default, reuseIdentifier: "Cell")
     
-    cell.selectionStyle = canSelect ? .default : .none
-    
     cell.textLabel?.font = CWIC.Fonts.Lucida
     cell.textLabel?.textColor = CWIC.Colors.RoyalBlue
     cell.textLabel?.text = object.description.capitalized

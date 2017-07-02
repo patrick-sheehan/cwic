@@ -28,7 +28,7 @@ extension UIViewController {
   func showPopupInfo(_ message: String) {
     
     present(
-      UIAlertController(title: "Info", message: message, preferredStyle: .alert)
+      UIAlertController(title: message, message: nil, preferredStyle: .alert)
         .withAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil)),
       animated: true, completion: nil)
   }

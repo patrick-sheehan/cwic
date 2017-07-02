@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		15E8E502EC365C345262ECF9 /* Pods_CWIC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE1A0DF163321C957951F84 /* Pods_CWIC.framework */; };
 		CD0F77071EFA77E20091BD0C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F77061EFA77E20091BD0C /* UIColor.swift */; };
-		CD0F770F1EFA78790091BD0C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F77081EFA78790091BD0C /* Date.swift */; };
 		CD0F77101EFA78790091BD0C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F77091EFA78790091BD0C /* String.swift */; };
 		CD0F77111EFA78790091BD0C /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F770A1EFA78790091BD0C /* UIAlertController.swift */; };
 		CD0F77121EFA78790091BD0C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F770B1EFA78790091BD0C /* UIImage.swift */; };
@@ -37,7 +36,6 @@
 		3EE6E575080A7D3FAAC06D3F /* Pods-CWIC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWIC.release.xcconfig"; path = "Pods/Target Support Files/Pods-CWIC/Pods-CWIC.release.xcconfig"; sourceTree = "<group>"; };
 		4DE1A0DF163321C957951F84 /* Pods_CWIC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CWIC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0F77061EFA77E20091BD0C /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Source/UIColor.swift; sourceTree = SOURCE_ROOT; };
-		CD0F77081EFA78790091BD0C /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Date.swift; path = Source/Date.swift; sourceTree = SOURCE_ROOT; };
 		CD0F77091EFA78790091BD0C /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = Source/String.swift; sourceTree = SOURCE_ROOT; };
 		CD0F770A1EFA78790091BD0C /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertController.swift; path = Source/UIAlertController.swift; sourceTree = SOURCE_ROOT; };
 		CD0F770B1EFA78790091BD0C /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Source/UIImage.swift; sourceTree = SOURCE_ROOT; };
@@ -95,15 +93,14 @@
 		CD0F77031EFA77AE0091BD0C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				CD0F77081EFA78790091BD0C /* Date.swift */,
 				CD0F77091EFA78790091BD0C /* String.swift */,
 				CD0F770A1EFA78790091BD0C /* UIAlertController.swift */,
 				CD0F770B1EFA78790091BD0C /* UIImage.swift */,
 				CD0F770E1EFA78790091BD0C /* UIViewController.swift */,
 				CD0F77061EFA77E20091BD0C /* UIColor.swift */,
+				CD6725301F08ADF200680250 /* UINavigationController.swift */,
 				CD6725271F08951100680250 /* UIStoryboard.swift */,
 				CD67252C1F08A7E000680250 /* UITableView.swift */,
-				CD6725301F08ADF200680250 /* UINavigationController.swift */,
 				CD6725341F08BD1B00680250 /* UITabBarController.swift */,
 			);
 			name = Extension;
@@ -318,7 +315,6 @@
 				CD0F77071EFA77E20091BD0C /* UIColor.swift in Sources */,
 				CD6725281F08951100680250 /* UIStoryboard.swift in Sources */,
 				CD67252D1F08A7E000680250 /* UITableView.swift in Sources */,
-				CD0F770F1EFA78790091BD0C /* Date.swift in Sources */,
 				CD5921BE1EF295290004B77B /* ProfileViewController.swift in Sources */,
 				CD0F77151EFA78790091BD0C /* UIViewController.swift in Sources */,
 				CD6725351F08BD1B00680250 /* UITabBarController.swift in Sources */,
