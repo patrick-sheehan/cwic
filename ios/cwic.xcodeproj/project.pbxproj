@@ -8,23 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		15E8E502EC365C345262ECF9 /* Pods_CWIC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE1A0DF163321C957951F84 /* Pods_CWIC.framework */; };
-		CD5921B71EF287DB0004B77B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5921B61EF287DB0004B77B /* RootViewController.swift */; };
-		CD5921BA1EF289630004B77B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5921B91EF289630004B77B /* RegisterViewController.swift */; };
+		CD0F77071EFA77E20091BD0C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F77061EFA77E20091BD0C /* UIColor.swift */; };
+		CD0F770F1EFA78790091BD0C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F77081EFA78790091BD0C /* Date.swift */; };
+		CD0F77101EFA78790091BD0C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F77091EFA78790091BD0C /* String.swift */; };
+		CD0F77111EFA78790091BD0C /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F770A1EFA78790091BD0C /* UIAlertController.swift */; };
+		CD0F77121EFA78790091BD0C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F770B1EFA78790091BD0C /* UIImage.swift */; };
+		CD0F77151EFA78790091BD0C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F770E1EFA78790091BD0C /* UIViewController.swift */; };
 		CD5921BC1EF289950004B77B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5921BB1EF289950004B77B /* User.swift */; };
 		CD5921BE1EF295290004B77B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5921BD1EF295290004B77B /* ProfileViewController.swift */; };
+		CD6725201F0893BE00680250 /* LucidaGrandeRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD67251F1F0893BE00680250 /* LucidaGrandeRegular.ttf */; };
+		CD6725281F08951100680250 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6725271F08951100680250 /* UIStoryboard.swift */; };
+		CD67252D1F08A7E000680250 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD67252C1F08A7E000680250 /* UITableView.swift */; };
+		CD67252F1F08AD5F00680250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD67252E1F08AD5F00680250 /* Assets.xcassets */; };
+		CD6725311F08ADF200680250 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6725301F08ADF200680250 /* UINavigationController.swift */; };
 		CD6FDB1F1EF1D64B00C16CB5 /* SponsorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB1E1EF1D64B00C16CB5 /* SponsorViewController.swift */; };
-		CD6FDB211EF1D66700C16CB5 /* SponsorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB201EF1D66700C16CB5 /* SponsorTableViewController.swift */; };
-		CD6FDB231EF1D67E00C16CB5 /* EventActivityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB221EF1D67E00C16CB5 /* EventActivityListViewController.swift */; };
-		CD6FDB251EF1D68900C16CB5 /* EventActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB241EF1D68900C16CB5 /* EventActivityViewController.swift */; };
-		CD6FDB271EF1D69400C16CB5 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB261EF1D69400C16CB5 /* FeedbackViewController.swift */; };
+		CD6FDB211EF1D66700C16CB5 /* SponsorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB201EF1D66700C16CB5 /* SponsorListViewController.swift */; };
+		CD6FDB231EF1D67E00C16CB5 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB221EF1D67E00C16CB5 /* EventListViewController.swift */; };
+		CD6FDB251EF1D68900C16CB5 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB241EF1D68900C16CB5 /* EventViewController.swift */; };
 		CD6FDB291EF1D6A900C16CB5 /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB281EF1D6A900C16CB5 /* Sponsor.swift */; };
-		CD6FDB2B1EF1D6B400C16CB5 /* EventActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB2A1EF1D6B400C16CB5 /* EventActivity.swift */; };
-		CD6FDB2D1EF1D6C800C16CB5 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB2C1EF1D6C800C16CB5 /* Recipe.swift */; };
-		CD6FDB2F1EF1D6D100C16CB5 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB2E1EF1D6D100C16CB5 /* RecipeViewController.swift */; };
-		CD6FDB311EF1D6DA00C16CB5 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB301EF1D6DA00C16CB5 /* RecipeTableViewController.swift */; };
-		CD6FDB331EF1D6F800C16CB5 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB321EF1D6F800C16CB5 /* AboutViewController.swift */; };
+		CD6FDB2B1EF1D6B400C16CB5 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB2A1EF1D6B400C16CB5 /* Event.swift */; };
 		CDF3F9951EB08A5300305DF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3F9911EB08A5300305DF4 /* AppDelegate.swift */; };
-		CDF3F9961EB08A5300305DF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF3F9921EB08A5300305DF4 /* Assets.xcassets */; };
 		CDF3F9971EB08A5300305DF4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDF3F9931EB08A5300305DF4 /* Info.plist */; };
 		CDF3F99D1EB08A5C00305DF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF3F9991EB08A5C00305DF4 /* LaunchScreen.storyboard */; };
 		CDF3F99E1EB08A5C00305DF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF3F99B1EB08A5C00305DF4 /* Main.storyboard */; };
@@ -33,24 +36,27 @@
 /* Begin PBXFileReference section */
 		3EE6E575080A7D3FAAC06D3F /* Pods-CWIC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWIC.release.xcconfig"; path = "Pods/Target Support Files/Pods-CWIC/Pods-CWIC.release.xcconfig"; sourceTree = "<group>"; };
 		4DE1A0DF163321C957951F84 /* Pods_CWIC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CWIC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0F77061EFA77E20091BD0C /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Source/UIColor.swift; sourceTree = SOURCE_ROOT; };
+		CD0F77081EFA78790091BD0C /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Date.swift; path = Source/Date.swift; sourceTree = SOURCE_ROOT; };
+		CD0F77091EFA78790091BD0C /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = Source/String.swift; sourceTree = SOURCE_ROOT; };
+		CD0F770A1EFA78790091BD0C /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertController.swift; path = Source/UIAlertController.swift; sourceTree = SOURCE_ROOT; };
+		CD0F770B1EFA78790091BD0C /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Source/UIImage.swift; sourceTree = SOURCE_ROOT; };
+		CD0F770E1EFA78790091BD0C /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = Source/UIViewController.swift; sourceTree = SOURCE_ROOT; };
 		CD1D70F11EB088BE007C80CE /* CWIC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CWIC.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD5921B61EF287DB0004B77B /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = Source/RootViewController.swift; sourceTree = SOURCE_ROOT; };
-		CD5921B91EF289630004B77B /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = Source/RegisterViewController.swift; sourceTree = SOURCE_ROOT; };
 		CD5921BB1EF289950004B77B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Source/User.swift; sourceTree = SOURCE_ROOT; };
 		CD5921BD1EF295290004B77B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Source/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
+		CD67251F1F0893BE00680250 /* LucidaGrandeRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = LucidaGrandeRegular.ttf; path = Source/LucidaGrandeRegular.ttf; sourceTree = SOURCE_ROOT; };
+		CD6725271F08951100680250 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIStoryboard.swift; path = Source/UIStoryboard.swift; sourceTree = SOURCE_ROOT; };
+		CD67252C1F08A7E000680250 /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableView.swift; path = Source/UITableView.swift; sourceTree = SOURCE_ROOT; };
+		CD67252E1F08AD5F00680250 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Source/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		CD6725301F08ADF200680250 /* UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UINavigationController.swift; path = Source/UINavigationController.swift; sourceTree = SOURCE_ROOT; };
 		CD6FDB1E1EF1D64B00C16CB5 /* SponsorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SponsorViewController.swift; path = Source/SponsorViewController.swift; sourceTree = SOURCE_ROOT; };
-		CD6FDB201EF1D66700C16CB5 /* SponsorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SponsorTableViewController.swift; path = Source/SponsorTableViewController.swift; sourceTree = SOURCE_ROOT; };
-		CD6FDB221EF1D67E00C16CB5 /* EventActivityListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventActivityListViewController.swift; path = Source/EventActivityListViewController.swift; sourceTree = SOURCE_ROOT; };
-		CD6FDB241EF1D68900C16CB5 /* EventActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventActivityViewController.swift; path = Source/EventActivityViewController.swift; sourceTree = SOURCE_ROOT; };
-		CD6FDB261EF1D69400C16CB5 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedbackViewController.swift; path = Source/FeedbackViewController.swift; sourceTree = SOURCE_ROOT; };
+		CD6FDB201EF1D66700C16CB5 /* SponsorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SponsorListViewController.swift; path = Source/SponsorListViewController.swift; sourceTree = SOURCE_ROOT; };
+		CD6FDB221EF1D67E00C16CB5 /* EventListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventListViewController.swift; path = Source/EventListViewController.swift; sourceTree = SOURCE_ROOT; };
+		CD6FDB241EF1D68900C16CB5 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventViewController.swift; path = Source/EventViewController.swift; sourceTree = SOURCE_ROOT; };
 		CD6FDB281EF1D6A900C16CB5 /* Sponsor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sponsor.swift; path = Source/Sponsor.swift; sourceTree = SOURCE_ROOT; };
-		CD6FDB2A1EF1D6B400C16CB5 /* EventActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventActivity.swift; path = Source/EventActivity.swift; sourceTree = SOURCE_ROOT; };
-		CD6FDB2C1EF1D6C800C16CB5 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recipe.swift; path = Source/Recipe.swift; sourceTree = SOURCE_ROOT; };
-		CD6FDB2E1EF1D6D100C16CB5 /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeViewController.swift; path = Source/RecipeViewController.swift; sourceTree = SOURCE_ROOT; };
-		CD6FDB301EF1D6DA00C16CB5 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeTableViewController.swift; path = Source/RecipeTableViewController.swift; sourceTree = SOURCE_ROOT; };
-		CD6FDB321EF1D6F800C16CB5 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutViewController.swift; path = Source/AboutViewController.swift; sourceTree = SOURCE_ROOT; };
+		CD6FDB2A1EF1D6B400C16CB5 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = Source/Event.swift; sourceTree = SOURCE_ROOT; };
 		CDF3F9911EB08A5300305DF4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Source/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
-		CDF3F9921EB08A5300305DF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Source/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		CDF3F9931EB08A5300305DF4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = SOURCE_ROOT; };
 		CDF3F99A1EB08A5C00305DF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Source/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		CDF3F99C1EB08A5C00305DF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Source/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
@@ -86,10 +92,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CD0F77031EFA77AE0091BD0C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CD0F77081EFA78790091BD0C /* Date.swift */,
+				CD0F77091EFA78790091BD0C /* String.swift */,
+				CD0F770A1EFA78790091BD0C /* UIAlertController.swift */,
+				CD0F770B1EFA78790091BD0C /* UIImage.swift */,
+				CD0F770E1EFA78790091BD0C /* UIViewController.swift */,
+				CD0F77061EFA77E20091BD0C /* UIColor.swift */,
+				CD6725271F08951100680250 /* UIStoryboard.swift */,
+				CD67252C1F08A7E000680250 /* UITableView.swift */,
+				CD6725301F08ADF200680250 /* UINavigationController.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		CD1D70E81EB088BE007C80CE = {
 			isa = PBXGroup;
 			children = (
 				CD1D70F31EB088BE007C80CE /* Source */,
+				CD67252B1F08972100680250 /* Supporting Files */,
 				CD1D70F21EB088BE007C80CE /* Products */,
 				0EC4444F072D83B7B62C6B1A /* Pods */,
 				45A03D098B4A98069DECD4E5 /* Frameworks */,
@@ -108,16 +131,10 @@
 			isa = PBXGroup;
 			children = (
 				CDF3F9911EB08A5300305DF4 /* AppDelegate.swift */,
-				CD5921B61EF287DB0004B77B /* RootViewController.swift */,
-				CD6FDB1D1EF1D2B100C16CB5 /* About */,
 				CD5921B81EF2894C0004B77B /* Account */,
 				CD6FDB181EF1D21D00C16CB5 /* Event */,
-				CD6FDB141EF1D1F000C16CB5 /* News Feed */,
-				CD6FDB171EF1D20E00C16CB5 /* Recipe */,
-				CDF3F9921EB08A5300305DF4 /* Assets.xcassets */,
-				CDF3F9991EB08A5C00305DF4 /* LaunchScreen.storyboard */,
-				CDF3F99B1EB08A5C00305DF4 /* Main.storyboard */,
-				CDF3F9931EB08A5300305DF4 /* Info.plist */,
+				CD6FDB191EF1D23000C16CB5 /* Sponsor */,
+				CD0F77031EFA77AE0091BD0C /* Extension */,
 			);
 			name = Source;
 			path = CWIC;
@@ -126,45 +143,31 @@
 		CD5921B81EF2894C0004B77B /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				CD6FDB191EF1D23000C16CB5 /* Sponsor */,
-				CD5921BD1EF295290004B77B /* ProfileViewController.swift */,
-				CD5921B91EF289630004B77B /* RegisterViewController.swift */,
 				CD5921BB1EF289950004B77B /* User.swift */,
+				CD5921BD1EF295290004B77B /* ProfileViewController.swift */,
 			);
 			name = Account;
 			sourceTree = "<group>";
 		};
-		CD6FDB131EF1D1E900C16CB5 /* Auction */ = {
+		CD67252B1F08972100680250 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CD67252E1F08AD5F00680250 /* Assets.xcassets */,
+				CD67251F1F0893BE00680250 /* LucidaGrandeRegular.ttf */,
+				CDF3F9991EB08A5C00305DF4 /* LaunchScreen.storyboard */,
+				CDF3F99B1EB08A5C00305DF4 /* Main.storyboard */,
+				CDF3F9931EB08A5300305DF4 /* Info.plist */,
 			);
-			name = Auction;
-			sourceTree = "<group>";
-		};
-		CD6FDB141EF1D1F000C16CB5 /* News Feed */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "News Feed";
-			sourceTree = "<group>";
-		};
-		CD6FDB171EF1D20E00C16CB5 /* Recipe */ = {
-			isa = PBXGroup;
-			children = (
-				CD6FDB2C1EF1D6C800C16CB5 /* Recipe.swift */,
-				CD6FDB301EF1D6DA00C16CB5 /* RecipeTableViewController.swift */,
-				CD6FDB2E1EF1D6D100C16CB5 /* RecipeViewController.swift */,
-			);
-			name = Recipe;
+			name = "Supporting Files";
+			path = CWIC;
 			sourceTree = "<group>";
 		};
 		CD6FDB181EF1D21D00C16CB5 /* Event */ = {
 			isa = PBXGroup;
 			children = (
-				CD6FDB131EF1D1E900C16CB5 /* Auction */,
-				CD6FDB2A1EF1D6B400C16CB5 /* EventActivity.swift */,
-				CD6FDB221EF1D67E00C16CB5 /* EventActivityListViewController.swift */,
-				CD6FDB241EF1D68900C16CB5 /* EventActivityViewController.swift */,
+				CD6FDB2A1EF1D6B400C16CB5 /* Event.swift */,
+				CD6FDB221EF1D67E00C16CB5 /* EventListViewController.swift */,
+				CD6FDB241EF1D68900C16CB5 /* EventViewController.swift */,
 			);
 			name = Event;
 			sourceTree = "<group>";
@@ -173,19 +176,10 @@
 			isa = PBXGroup;
 			children = (
 				CD6FDB281EF1D6A900C16CB5 /* Sponsor.swift */,
-				CD6FDB201EF1D66700C16CB5 /* SponsorTableViewController.swift */,
+				CD6FDB201EF1D66700C16CB5 /* SponsorListViewController.swift */,
 				CD6FDB1E1EF1D64B00C16CB5 /* SponsorViewController.swift */,
 			);
 			name = Sponsor;
-			sourceTree = "<group>";
-		};
-		CD6FDB1D1EF1D2B100C16CB5 /* About */ = {
-			isa = PBXGroup;
-			children = (
-				CD6FDB321EF1D6F800C16CB5 /* AboutViewController.swift */,
-				CD6FDB261EF1D69400C16CB5 /* FeedbackViewController.swift */,
-			);
-			name = About;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,8 +248,9 @@
 			files = (
 				CDF3F99D1EB08A5C00305DF4 /* LaunchScreen.storyboard in Resources */,
 				CDF3F9971EB08A5300305DF4 /* Info.plist in Resources */,
-				CDF3F9961EB08A5300305DF4 /* Assets.xcassets in Resources */,
+				CD6725201F0893BE00680250 /* LucidaGrandeRegular.ttf in Resources */,
 				CDF3F99E1EB08A5C00305DF4 /* Main.storyboard in Resources */,
+				CD67252F1F08AD5F00680250 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,22 +309,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD6FDB211EF1D66700C16CB5 /* SponsorTableViewController.swift in Sources */,
-				CD6FDB2B1EF1D6B400C16CB5 /* EventActivity.swift in Sources */,
+				CD0F77101EFA78790091BD0C /* String.swift in Sources */,
+				CD6FDB211EF1D66700C16CB5 /* SponsorListViewController.swift in Sources */,
+				CD6FDB2B1EF1D6B400C16CB5 /* Event.swift in Sources */,
+				CD0F77111EFA78790091BD0C /* UIAlertController.swift in Sources */,
 				CD6FDB1F1EF1D64B00C16CB5 /* SponsorViewController.swift in Sources */,
-				CD6FDB271EF1D69400C16CB5 /* FeedbackViewController.swift in Sources */,
-				CD6FDB2F1EF1D6D100C16CB5 /* RecipeViewController.swift in Sources */,
+				CD0F77121EFA78790091BD0C /* UIImage.swift in Sources */,
 				CD6FDB291EF1D6A900C16CB5 /* Sponsor.swift in Sources */,
+				CD0F77071EFA77E20091BD0C /* UIColor.swift in Sources */,
+				CD6725281F08951100680250 /* UIStoryboard.swift in Sources */,
+				CD67252D1F08A7E000680250 /* UITableView.swift in Sources */,
+				CD0F770F1EFA78790091BD0C /* Date.swift in Sources */,
 				CD5921BE1EF295290004B77B /* ProfileViewController.swift in Sources */,
+				CD0F77151EFA78790091BD0C /* UIViewController.swift in Sources */,
+				CD6725311F08ADF200680250 /* UINavigationController.swift in Sources */,
 				CDF3F9951EB08A5300305DF4 /* AppDelegate.swift in Sources */,
-				CD6FDB231EF1D67E00C16CB5 /* EventActivityListViewController.swift in Sources */,
+				CD6FDB231EF1D67E00C16CB5 /* EventListViewController.swift in Sources */,
 				CD5921BC1EF289950004B77B /* User.swift in Sources */,
-				CD6FDB311EF1D6DA00C16CB5 /* RecipeTableViewController.swift in Sources */,
-				CD5921BA1EF289630004B77B /* RegisterViewController.swift in Sources */,
-				CD5921B71EF287DB0004B77B /* RootViewController.swift in Sources */,
-				CD6FDB251EF1D68900C16CB5 /* EventActivityViewController.swift in Sources */,
-				CD6FDB331EF1D6F800C16CB5 /* AboutViewController.swift in Sources */,
-				CD6FDB2D1EF1D6C800C16CB5 /* Recipe.swift in Sources */,
+				CD6FDB251EF1D68900C16CB5 /* EventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
