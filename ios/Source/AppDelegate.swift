@@ -42,10 +42,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     tabBarAppearance.tintColor = .white
     tabBarAppearance.barTintColor = Colors.RoyalBlue
     
-    
     // Configure main window
     window = UIWindow(frame: UIScreen.main.bounds)
-    window?.rootViewController = UINavigationController.getRootView()
+    window?.rootViewController = UITabBarController([
+      UINavigationController("Profile", .Profile, UIStoryboard.getViewController(.Profile)),
+      UINavigationController("Events", .Events, EventListViewController()),
+      UINavigationController("About", .About, EventViewController.create(event: Sponsor.CwicSponsor.event)),
+      UINavigationController("Sponsors", .Sponsors, SponsorListViewController())
+    ])
     window?.makeKeyAndVisible()
     
     return true
