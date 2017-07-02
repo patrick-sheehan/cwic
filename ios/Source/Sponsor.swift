@@ -7,3 +7,32 @@
 //
 
 import Foundation
+
+class Sponsor: User {
+  
+  var name: String? = ""
+  var url: String? = nil
+  
+  
+  init(_ name: String) {
+    super.init()
+    
+    self.name = name
+    self.userType = .sponsor
+  }
+  
+  override var description: String {
+    return name ?? ""
+  }
+}
+
+extension Sponsor {
+  
+  static let examples: [Sponsor] = [
+    Sponsor("Bill's Hardware"),
+    Sponsor("Pat's software"),
+    Sponsor("Surf's up co"),
+    Sponsor("Hormel... No Beans!!"),
+    Sponsor("Oleo Learning Co")
+  ]
+}
