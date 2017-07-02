@@ -10,11 +10,11 @@ import UIKit
 
 extension UITableView {
   
-  func defaultCell(_ object: CustomStringConvertible) -> UITableViewCell {
+  func defaultCell(_ object: CustomStringConvertible, canSelect: Bool = false) -> UITableViewCell {
     
     let cell = dequeueReusableCell(withIdentifier: "Cell") ?? UITableViewCell(style: .default, reuseIdentifier: "Cell")
     
-    cell.selectionStyle = .none
+    cell.selectionStyle = canSelect ? .default : .none
     
     cell.textLabel?.font = CWIC.Fonts.Lucida
     cell.textLabel?.textColor = CWIC.Colors.RoyalBlue

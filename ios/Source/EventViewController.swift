@@ -18,7 +18,6 @@ class EventViewController: UIViewController {
   
   // MARK: - IB Outlets
   
-  @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var tableView: UITableView!
   
@@ -28,7 +27,13 @@ class EventViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    navigationItem.title = "Event"
+    navigationItem.title = event?.description
   }
   
+  
+  static func create(event: Event) -> EventViewController {
+    let vc = UIStoryboard.getViewController(.Event) as! EventViewController
+    vc.event = event
+    return vc
+  }
 }

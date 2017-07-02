@@ -6,7 +6,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -37,16 +36,13 @@
                                             <constraint firstAttribute="width" constant="75" id="onz-lG-U1L"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NU0-qI-tch">
-                                        <rect key="frame" x="91" y="49.5" width="128" height="33.5"/>
-                                        <color key="backgroundColor" red="0.1215686275" green="0.066666666669999999" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="128" id="NAv-NT-ymL"/>
-                                        </constraints>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NU0-qI-tch">
+                                        <rect key="frame" x="91" y="49.5" width="221" height="33.5"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="15"/>
                                         <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                                        <state key="normal" title="View Trophies">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Trophies &gt;">
+                                            <color key="titleColor" red="0.1215686275" green="0.066666666669999999" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marcus Luttrell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjX-NW-Zph">
@@ -58,6 +54,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="NU0-qI-tch" firstAttribute="trailing" secondItem="RjX-NW-Zph" secondAttribute="trailing" id="3KM-8G-Hdz"/>
                                     <constraint firstItem="NU0-qI-tch" firstAttribute="bottom" secondItem="0LS-N6-Jlq" secondAttribute="bottom" id="5YW-yJ-mUK"/>
                                     <constraint firstItem="0LS-N6-Jlq" firstAttribute="top" secondItem="4Yt-mC-QU4" secondAttribute="top" constant="8" id="66t-XN-Xvc"/>
                                     <constraint firstItem="0LS-N6-Jlq" firstAttribute="top" secondItem="4Yt-mC-QU4" secondAttribute="top" constant="8" id="GE5-o4-6bk"/>
@@ -116,23 +113,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZq-BK-lX8">
-                                <rect key="frame" x="16" y="32" width="288" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="dbP-kG-QmS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-2781-1316" translatesAutoresizingMaskIntoConstraints="NO" id="jAl-QM-2YW">
-                                <rect key="frame" x="40" y="79" width="240" height="128"/>
+                                <rect key="frame" x="24" y="12" width="272" height="145"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jAl-QM-2YW" secondAttribute="height" multiplier="15:8" id="Lzd-p1-0JX"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="avb-8F-EQ6">
-                                <rect key="frame" x="0.0" y="219" width="320" height="261"/>
+                                <rect key="frame" x="0.0" y="169" width="320" height="311"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
@@ -140,21 +128,22 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="J97-6P-y13" firstAttribute="top" secondItem="avb-8F-EQ6" secondAttribute="bottom" id="AO3-VZ-pAl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oZq-BK-lX8" secondAttribute="trailing" id="I0r-zJ-Seb"/>
                             <constraint firstItem="avb-8F-EQ6" firstAttribute="top" secondItem="jAl-QM-2YW" secondAttribute="bottom" constant="12" id="Obx-rY-nkl"/>
-                            <constraint firstItem="oZq-BK-lX8" firstAttribute="top" secondItem="v92-Eq-CET" secondAttribute="bottom" constant="12" id="Snd-5u-R0s"/>
-                            <constraint firstItem="jAl-QM-2YW" firstAttribute="top" secondItem="oZq-BK-lX8" secondAttribute="bottom" constant="12" id="bQQ-n4-T1L"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jAl-QM-2YW" secondAttribute="trailing" constant="24" id="dKn-X8-18I"/>
-                            <constraint firstItem="jAl-QM-2YW" firstAttribute="leading" secondItem="nJt-5x-lGy" secondAttribute="leadingMargin" constant="24" id="iU2-No-yRx"/>
+                            <constraint firstItem="jAl-QM-2YW" firstAttribute="top" secondItem="v92-Eq-CET" secondAttribute="bottom" constant="12" id="Ztv-WX-FDF"/>
+                            <constraint firstItem="jAl-QM-2YW" firstAttribute="leading" secondItem="nJt-5x-lGy" secondAttribute="leading" constant="24" id="iHh-o1-xgR"/>
                             <constraint firstItem="avb-8F-EQ6" firstAttribute="leading" secondItem="nJt-5x-lGy" secondAttribute="leading" id="luO-Xp-EL1"/>
-                            <constraint firstItem="oZq-BK-lX8" firstAttribute="leading" secondItem="nJt-5x-lGy" secondAttribute="leadingMargin" id="rvr-rL-u6o"/>
+                            <constraint firstAttribute="trailing" secondItem="jAl-QM-2YW" secondAttribute="trailing" constant="24" id="rWn-NL-P87"/>
                             <constraint firstAttribute="trailing" secondItem="avb-8F-EQ6" secondAttribute="trailing" id="w1L-WH-aUw"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="480"/>
                     <connections>
                         <outlet property="imageView" destination="jAl-QM-2YW" id="9vj-sf-dnD"/>
                         <outlet property="tableView" destination="avb-8F-EQ6" id="qb4-NW-VXI"/>
-                        <outlet property="titleLabel" destination="oZq-BK-lX8" id="miV-rl-fCB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f9H-fL-FJs" userLabel="First Responder" sceneMemberID="firstResponder"/>

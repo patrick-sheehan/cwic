@@ -32,7 +32,7 @@ class EventListViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    return tableView.defaultCell(events[indexPath.row].description)
+    return tableView.defaultCell(events[indexPath.row].description, canSelect: true)
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

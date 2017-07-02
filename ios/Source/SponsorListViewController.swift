@@ -32,7 +32,11 @@ class SponsorListViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    return tableView.defaultCell(sponsors[indexPath.row].description)
+    return tableView.defaultCell(sponsors[indexPath.row].description, canSelect: true)
   }
   
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let vc = EventViewController.create(event: sponsors[indexPath.row].event)
+    navigationController?.pushViewController(vc, animated: true)
+  }
 }

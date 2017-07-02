@@ -24,6 +24,10 @@ class Sponsor: User {
   override var description: String {
     return name ?? ""
   }
+  
+  var event: Event {
+    return Event(.sponsor, object: self)
+  }
 }
 
 extension Sponsor {
@@ -35,4 +39,6 @@ extension Sponsor {
     Sponsor("Hormel... No Beans!!"),
     Sponsor("Oleo Learning Co")
   ]
+  
+  static let CwicSponsor: Sponsor = Sponsor("About CWIC")
 }
