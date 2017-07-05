@@ -6,36 +6,27 @@
 //  Copyright © 2017 Síocháin Solutions. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Sponsor: User {
   
-  var name: String? = ""
+  var aboutText: String? = nil
   var url: String? = nil
   
-  
-  init(_ name: String) {
-    super.init()
+  init(_ name: String, imageName: String, about: String?) {
     
-    self.name = name
+    super.init(name, UIImage(named: imageName))
+    
+    self.aboutText = about
     self.userType = .sponsor
-  }
-  
-  override var description: String {
-    return name ?? ""
+    
   }
   
   var event: Event {
-    return Event(.sponsor, object: self)
+    return Event(.sponsor, object: self, image: image, aboutText: aboutText)
   }
   
-  static let examples: [Sponsor] = [
-    Sponsor("Bill's Hardware"),
-    Sponsor("Pat's software"),
-    Sponsor("Surf's up co"),
-    Sponsor("Hormel... No Beans!!"),
-    Sponsor("Oleo Learning Co")
-  ]
-  
-  static let CWIC: Sponsor = Sponsor("About CWIC")
+  static let CWIC = Sponsor("About CWIC",
+                            imageName: "cwic-large",
+                            about: "CWIC 17 will be donating all proceeds to the ReBoot Program within the Boot Campaign.")
 }

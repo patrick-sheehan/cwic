@@ -13,7 +13,7 @@ class SponsorListViewController: UITableViewController {
   
   // MARK: - Member Variables
   
-  let sponsors = Sponsor.examples
+  var sponsors: [Sponsor] = []
   
   
   // MARK: - View Lifecycle
@@ -22,6 +22,14 @@ class SponsorListViewController: UITableViewController {
     super.viewDidLoad()
     
     navigationItem.title = "Sponsors"
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    API.getSponsors {
+      self.sponsors = $0
+    }
   }
   
   
