@@ -10,7 +10,6 @@ import UIKit
 
 class EventListViewController: UITableViewController {
   
-  
   // MARK: - Member Variables
   
   let events = Event.examples

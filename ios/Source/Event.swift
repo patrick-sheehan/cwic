@@ -35,6 +35,8 @@ class Event: CustomStringConvertible {
   var type: EventType
   var name: String
   var date: Date?
+  var image: UIImage?
+  var aboutText: String?
   
   var description: String {
     return name
@@ -44,24 +46,27 @@ class Event: CustomStringConvertible {
     fatalError("Not implemented")
   }
   
-  init(_ type: EventType, object: CustomStringConvertible, date: Date? = nil) {
+  init(_ type: EventType, object: CustomStringConvertible, date: Date? = nil, image: UIImage? = nil, aboutText: String? = nil) {
     self.type = type
     self.name = object.description
     self.date = date
+    self.image = image
+    self.aboutText = aboutText
   }
   
   var actions: [Action] {
     return [
-    
-    
-    
-    
+      
+      
+      
+      
     ]
   }
   
 }
 
 extension Event {
+  
   static let examples = [
     Event(.auction, object: "Silent Auction"),
     Event(.concert, object: "Lynyrd Skynyrd"),

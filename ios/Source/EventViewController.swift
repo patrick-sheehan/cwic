@@ -19,7 +19,10 @@ class EventViewController: UIViewController {
   // MARK: - IB Outlets
   
   @IBOutlet weak var imageView: UIImageView!
+  @IBOutlet weak var textView: UITextView!
   @IBOutlet weak var tableView: UITableView!
+  
+  @IBOutlet weak var textViewHeight: NSLayoutConstraint!
   
   
   // MARK: - View Lifecycle
@@ -27,12 +30,24 @@ class EventViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    navigationItem.title = event?.description
-    
     tableView.dataSource = self
     tableView.delegate = self
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    navigationItem.title = event?.description
+    
+    imageView.image = event.image
+    
+    if let text = event.aboutText {
+      textViewHeight.constant = 80
+      textView.text = text
+    } else {
+      textViewHeight.constant = 0
+    }
+  }
   
   static func create(event: Event) -> EventViewController {
     let vc = UIStoryboard.getViewController(.Event) as! EventViewController

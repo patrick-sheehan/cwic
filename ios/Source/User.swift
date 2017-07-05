@@ -6,10 +6,9 @@
 //  Copyright © 2017 Síocháin Solutions. All rights reserved.
 //
 
+import UIKit
 
-struct Trophy {
-  
-}
+struct Trophy {}
 
 
 enum Gender {
@@ -20,6 +19,9 @@ enum Gender {
 
 class User: CustomStringConvertible {
 
+  var name: String
+  var image: UIImage?
+  
   /// What type of user am I? What access do I have as a result?
   var userType: UserType = .visitor
   
@@ -41,10 +43,18 @@ class User: CustomStringConvertible {
   /// What is my gender? (optional)
   var gender: Gender?
   
+  
+  init(_ name: String, _ image: UIImage? = nil) {
+    
+    self.name = name
+    self.image = image
+  }
+  
 
   var description: String {
-    return "\(self.userType)".capitalized
+    return name
   }
+  
 }
 
 enum UserType {
