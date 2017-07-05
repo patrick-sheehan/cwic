@@ -42,7 +42,7 @@ class EventViewController: UIViewController {
     imageView.image = event.image
     
     if let text = event.aboutText {
-      textViewHeight.constant = 80
+      textViewHeight.constant = 250
       textView.text = text
     } else {
       textViewHeight.constant = 0

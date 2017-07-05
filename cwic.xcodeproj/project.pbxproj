@@ -56,8 +56,20 @@
 		CDC9FAC31F0CC616008FBCB6 /* marcus.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC9FAC01F0CC616008FBCB6 /* marcus.png */; };
 		CDC9FAC61F0CC644008FBCB6 /* cwic-large.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC9FAC41F0CC644008FBCB6 /* cwic-large.png */; };
 		CDC9FAC71F0CC644008FBCB6 /* cwic-small.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC9FAC51F0CC644008FBCB6 /* cwic-small.png */; };
+		CDE34F2A1F0CF5BC00F48707 /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = CDE34F291F0CF5BC00F48707 /* events.json */; };
+		CDE34F381F0CF81700F48707 /* artsCrafts.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDE34F2C1F0CF81700F48707 /* artsCrafts.jpg */; };
+		CDE34F391F0CF81700F48707 /* auction.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE34F2D1F0CF81700F48707 /* auction.png */; };
+		CDE34F3A1F0CF81700F48707 /* booth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDE34F2E1F0CF81700F48707 /* booth.jpg */; };
+		CDE34F3B1F0CF81700F48707 /* concert.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDE34F2F1F0CF81700F48707 /* concert.jpg */; };
+		CDE34F3C1F0CF81700F48707 /* cookoff.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDE34F301F0CF81700F48707 /* cookoff.jpg */; };
+		CDE34F3D1F0CF81700F48707 /* lake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDE34F311F0CF81700F48707 /* lake.jpg */; };
+		CDE34F3E1F0CF81700F48707 /* park.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDE34F321F0CF81700F48707 /* park.jpg */; };
+		CDE34F3F1F0CF81700F48707 /* parking.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDE34F331F0CF81700F48707 /* parking.jpg */; };
+		CDE34F401F0CF81700F48707 /* puttPutt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDE34F341F0CF81700F48707 /* puttPutt.jpg */; };
+		CDE34F411F0CF81700F48707 /* raffle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDE34F351F0CF81700F48707 /* raffle.jpg */; };
+		CDE34F421F0CF81700F48707 /* swimmingPool.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDE34F361F0CF81700F48707 /* swimmingPool.jpg */; };
+		CDE34F431F0CF81700F48707 /* waterSlide.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDE34F371F0CF81700F48707 /* waterSlide.jpg */; };
 		CDF3F9951EB08A5300305DF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3F9911EB08A5300305DF4 /* AppDelegate.swift */; };
-		CDF3F9971EB08A5300305DF4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDF3F9931EB08A5300305DF4 /* Info.plist */; };
 		CDF3F99D1EB08A5C00305DF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF3F9991EB08A5C00305DF4 /* LaunchScreen.storyboard */; };
 		CDF3F99E1EB08A5C00305DF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF3F99B1EB08A5C00305DF4 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -114,6 +126,19 @@
 		CDC9FAC01F0CC616008FBCB6 /* marcus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marcus.png; path = Resources/Images/marcus.png; sourceTree = SOURCE_ROOT; };
 		CDC9FAC41F0CC644008FBCB6 /* cwic-large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cwic-large.png"; path = "Resources/Images/cwic-large.png"; sourceTree = SOURCE_ROOT; };
 		CDC9FAC51F0CC644008FBCB6 /* cwic-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cwic-small.png"; path = "Resources/Images/cwic-small.png"; sourceTree = SOURCE_ROOT; };
+		CDE34F291F0CF5BC00F48707 /* events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = events.json; path = Resources/events.json; sourceTree = SOURCE_ROOT; };
+		CDE34F2C1F0CF81700F48707 /* artsCrafts.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = artsCrafts.jpg; path = Resources/Images/artsCrafts.jpg; sourceTree = SOURCE_ROOT; };
+		CDE34F2D1F0CF81700F48707 /* auction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = auction.png; path = Resources/Images/auction.png; sourceTree = SOURCE_ROOT; };
+		CDE34F2E1F0CF81700F48707 /* booth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = booth.jpg; path = Resources/Images/booth.jpg; sourceTree = SOURCE_ROOT; };
+		CDE34F2F1F0CF81700F48707 /* concert.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = concert.jpg; path = Resources/Images/concert.jpg; sourceTree = SOURCE_ROOT; };
+		CDE34F301F0CF81700F48707 /* cookoff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cookoff.jpg; path = Resources/Images/cookoff.jpg; sourceTree = SOURCE_ROOT; };
+		CDE34F311F0CF81700F48707 /* lake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lake.jpg; path = Resources/Images/lake.jpg; sourceTree = SOURCE_ROOT; };
+		CDE34F321F0CF81700F48707 /* park.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = park.jpg; path = Resources/Images/park.jpg; sourceTree = SOURCE_ROOT; };
+		CDE34F331F0CF81700F48707 /* parking.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = parking.jpg; path = Resources/Images/parking.jpg; sourceTree = SOURCE_ROOT; };
+		CDE34F341F0CF81700F48707 /* puttPutt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = puttPutt.jpg; path = Resources/Images/puttPutt.jpg; sourceTree = SOURCE_ROOT; };
+		CDE34F351F0CF81700F48707 /* raffle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = raffle.jpg; path = Resources/Images/raffle.jpg; sourceTree = SOURCE_ROOT; };
+		CDE34F361F0CF81700F48707 /* swimmingPool.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = swimmingPool.jpg; path = Resources/Images/swimmingPool.jpg; sourceTree = SOURCE_ROOT; };
+		CDE34F371F0CF81700F48707 /* waterSlide.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = waterSlide.jpg; path = Resources/Images/waterSlide.jpg; sourceTree = SOURCE_ROOT; };
 		CDF3F9911EB08A5300305DF4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Source/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		CDF3F9931EB08A5300305DF4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = SOURCE_ROOT; };
 		CDF3F99A1EB08A5C00305DF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Source/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
@@ -212,13 +237,13 @@
 		CD67252B1F08972100680250 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CDC9FA701F0CC538008FBCB6 /* Images */,
 				CD67252E1F08AD5F00680250 /* Assets.xcassets */,
+				CDC9FA701F0CC538008FBCB6 /* Images */,
+				CDE34F2B1F0CF5C400F48707 /* JSON */,
 				CD67251F1F0893BE00680250 /* LucidaGrandeRegular.ttf */,
 				CDF3F9991EB08A5C00305DF4 /* LaunchScreen.storyboard */,
 				CDF3F99B1EB08A5C00305DF4 /* Main.storyboard */,
 				CDF3F9931EB08A5300305DF4 /* Info.plist */,
-				CDC9FA6C1F0CBFBC008FBCB6 /* sponsors.json */,
 			);
 			name = "Supporting Files";
 			path = CWIC;
@@ -246,6 +271,18 @@
 		CDC9FA701F0CC538008FBCB6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CDE34F2C1F0CF81700F48707 /* artsCrafts.jpg */,
+				CDE34F2D1F0CF81700F48707 /* auction.png */,
+				CDE34F2E1F0CF81700F48707 /* booth.jpg */,
+				CDE34F2F1F0CF81700F48707 /* concert.jpg */,
+				CDE34F301F0CF81700F48707 /* cookoff.jpg */,
+				CDE34F311F0CF81700F48707 /* lake.jpg */,
+				CDE34F321F0CF81700F48707 /* park.jpg */,
+				CDE34F331F0CF81700F48707 /* parking.jpg */,
+				CDE34F341F0CF81700F48707 /* puttPutt.jpg */,
+				CDE34F351F0CF81700F48707 /* raffle.jpg */,
+				CDE34F361F0CF81700F48707 /* swimmingPool.jpg */,
+				CDE34F371F0CF81700F48707 /* waterSlide.jpg */,
 				CDC9FAC41F0CC644008FBCB6 /* cwic-large.png */,
 				CDC9FAC51F0CC644008FBCB6 /* cwic-small.png */,
 				CDC9FABE1F0CC616008FBCB6 /* camo-bg.jpg */,
@@ -275,6 +312,15 @@
 				CDC9FA971F0CC602008FBCB6 /* sjk-powers.jpg */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		CDE34F2B1F0CF5C400F48707 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				CDC9FA6C1F0CBFBC008FBCB6 /* sponsors.json */,
+				CDE34F291F0CF5BC00F48707 /* events.json */,
+			);
+			name = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,28 +389,40 @@
 			files = (
 				CDC9FABA1F0CC60B008FBCB6 /* red-dirt-apparel.jpg in Resources */,
 				CDC9FAB71F0CC60B008FBCB6 /* kwik-kopy.jpg in Resources */,
+				CDE34F411F0CF81700F48707 /* raffle.jpg in Resources */,
+				CDE34F3B1F0CF81700F48707 /* concert.jpg in Resources */,
+				CDE34F391F0CF81700F48707 /* auction.png in Resources */,
 				CDC9FAB31F0CC60B008FBCB6 /* cowboy-cutting-board.jpg in Resources */,
 				CDF3F99D1EB08A5C00305DF4 /* LaunchScreen.storyboard in Resources */,
-				CDF3F9971EB08A5300305DF4 /* Info.plist in Resources */,
 				CDC9FAAE1F0CC60B008FBCB6 /* alliance.jpg in Resources */,
+				CDE34F3F1F0CF81700F48707 /* parking.jpg in Resources */,
+				CDE34F3C1F0CF81700F48707 /* cookoff.jpg in Resources */,
+				CDE34F401F0CF81700F48707 /* puttPutt.jpg in Resources */,
 				CDC9FAB11F0CC60B008FBCB6 /* breco.jpg in Resources */,
 				CDC9FAB01F0CC60B008FBCB6 /* amf.jpg in Resources */,
 				CDC9FA9D1F0CC602008FBCB6 /* sjk-powers.jpg in Resources */,
 				CDC9FAB61F0CC60B008FBCB6 /* ktex.jpg in Resources */,
+				CDE34F431F0CF81700F48707 /* waterSlide.jpg in Resources */,
 				CDC9FABC1F0CC60B008FBCB6 /* texomatic.png in Resources */,
 				CDC9FA981F0CC602008FBCB6 /* chili.jpg in Resources */,
 				CDC9FA9B1F0CC602008FBCB6 /* remax.jpg in Resources */,
 				CD6725201F0893BE00680250 /* LucidaGrandeRegular.ttf in Resources */,
+				CDE34F2A1F0CF5BC00F48707 /* events.json in Resources */,
 				CDC9FAB21F0CC60B008FBCB6 /* cogen-cleaning-technology.jpg in Resources */,
 				CDC9FA991F0CC602008FBCB6 /* dessert.jpg in Resources */,
 				CDF3F99E1EB08A5C00305DF4 /* Main.storyboard in Resources */,
 				CDC9FABB1F0CC60B008FBCB6 /* rvsource.png in Resources */,
+				CDE34F3E1F0CF81700F48707 /* park.jpg in Resources */,
 				CDC9FAC21F0CC616008FBCB6 /* flyer.jpg in Resources */,
+				CDE34F3A1F0CF81700F48707 /* booth.jpg in Resources */,
 				CDC9FA6D1F0CBFBC008FBCB6 /* sponsors.json in Resources */,
 				CDC9FAAF1F0CC60B008FBCB6 /* am-express.png in Resources */,
+				CDE34F3D1F0CF81700F48707 /* lake.jpg in Resources */,
 				CDC9FAB91F0CC60B008FBCB6 /* precision-iceblast.png in Resources */,
 				CDC9FAC11F0CC616008FBCB6 /* camo-bg.jpg in Resources */,
+				CDE34F421F0CF81700F48707 /* swimmingPool.jpg in Resources */,
 				CDC9FAB51F0CC60B008FBCB6 /* kruse-village.jpg in Resources */,
+				CDE34F381F0CF81700F48707 /* artsCrafts.jpg in Resources */,
 				CDC9FAB41F0CC60B008FBCB6 /* goshawk.jpg in Resources */,
 				CDC9FA9A1F0CC602008FBCB6 /* mortgage-outfitters.jpg in Resources */,
 				CDC9FAC31F0CC616008FBCB6 /* marcus.png in Resources */,
@@ -580,7 +638,7 @@
 				DEVELOPMENT_TEAM = EFZ729EF85;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.siochain.CWIC;
+				PRODUCT_BUNDLE_IDENTIFIER = co.siochain.cwic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -596,7 +654,7 @@
 				DEVELOPMENT_TEAM = EFZ729EF85;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.siochain.CWIC;
+				PRODUCT_BUNDLE_IDENTIFIER = co.siochain.cwic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

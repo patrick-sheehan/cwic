@@ -46,19 +46,16 @@ class Event: CustomStringConvertible {
     fatalError("Not implemented")
   }
   
-  init(_ type: EventType, object: CustomStringConvertible, date: Date? = nil, image: UIImage? = nil, aboutText: String? = nil) {
+  init(_ type: EventType, object: CustomStringConvertible, date: Date? = nil, imageName: String = "", aboutText: String? = nil) {
     self.type = type
     self.name = object.description
     self.date = date
-    self.image = image
+    self.image = UIImage(named: imageName)
     self.aboutText = aboutText
   }
   
   var actions: [Action] {
     return [
-      
-      
-      
       
     ]
   }
@@ -68,18 +65,17 @@ class Event: CustomStringConvertible {
 extension Event {
   
   static let examples = [
-    Event(.auction, object: "Silent Auction"),
-    Event(.concert, object: "Lynyrd Skynyrd"),
-    Event(.cookoff, object: "Chili Cookoff Competition"),
-    Event(.raffle, object: "$1 raffle for new iPod"),
-    Event(.artsCrafts, object: "Make your own dream catcher!"),
-    Event(.booth, object: "Free Hugs Booth!"),
-    Event(.lake, object: "Jump in the lake from a rope swing!"),
-    Event(.park, object: "Come swing with your friends and grill some steaks"),
-    Event(.parking, object: "Click here to learn about parking"),
-    Event(.puttPutt, object: "Putt putt golf with your sweetheart"),
-    Event(.swimmingPool, object: "Checkout the pool's waterslide and diving board!"),
-    Event(.users, object: "Where my friends at?"),
-    Event(.waterSlide, object: "Brand new water slide at the swimming pool!")
+    Event(.auction, object: "Silent Auction", imageName: "auction.png"),
+    Event(.concert, object: "Lynyrd Skynyrd", imageName: "concert.jpg"),
+    Event(.cookoff, object: "Chili Cookoff Competition", imageName: "cookoff.jpg"),
+    Event(.raffle, object: "$1 raffle for new iPod", imageName: "raffle.jpg"),
+    Event(.artsCrafts, object: "Make your own dream catcher!", imageName: "artsCrafts.jpg"),
+    Event(.booth, object: "Free Hugs Booth!", imageName: "booth.jpg"),
+    Event(.lake, object: "Jump in the lake from a rope swing!", imageName: "lake.jpg"),
+    Event(.park, object: "Come swing with your friends and grill some steaks", imageName: "park.jpg"),
+    Event(.parking, object: "Click here to learn about parking", imageName: "parking.jpg"),
+    Event(.puttPutt, object: "Putt putt golf with your sweetheart", imageName: "puttPutt.jpg"),
+    Event(.swimmingPool, object: "Checkout the pool's waterslide and diving board!", imageName: "swimmingPool.jpg"),
+    Event(.waterSlide, object: "Brand new water slide at the swimming pool!", imageName: "waterSlide.jpg")
   ]
 }
