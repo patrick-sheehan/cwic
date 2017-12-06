@@ -30,6 +30,8 @@
 		CDC9FA6F1F0CC00B008FBCB6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9FA6E1F0CC00B008FBCB6 /* API.swift */; };
 		CDD3DB811FD84F5A009FB913 /* ImageTextListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD3DB801FD84F5A009FB913 /* ImageTextListViewController.swift */; };
 		CDD3DB851FD85554009FB913 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD3DB841FD85553009FB913 /* UIImageView.swift */; };
+		CDD3DB871FD85AB1009FB913 /* PositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD3DB861FD85AB1009FB913 /* PositionViewController.swift */; };
+		CDD3DB891FD86339009FB913 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD3DB881FD86339009FB913 /* Position.swift */; };
 		CDF3F9951EB08A5300305DF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3F9911EB08A5300305DF4 /* AppDelegate.swift */; };
 		CDF3F99D1EB08A5C00305DF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF3F9991EB08A5C00305DF4 /* LaunchScreen.storyboard */; };
 		CDF3F99E1EB08A5C00305DF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF3F99B1EB08A5C00305DF4 /* Main.storyboard */; };
@@ -61,6 +63,8 @@
 		CDC9FA6E1F0CC00B008FBCB6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = Source/API.swift; sourceTree = SOURCE_ROOT; };
 		CDD3DB801FD84F5A009FB913 /* ImageTextListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageTextListViewController.swift; path = Source/ImageTextListViewController.swift; sourceTree = SOURCE_ROOT; };
 		CDD3DB841FD85553009FB913 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageView.swift; path = Source/UIImageView.swift; sourceTree = SOURCE_ROOT; };
+		CDD3DB861FD85AB1009FB913 /* PositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PositionViewController.swift; path = Source/PositionViewController.swift; sourceTree = SOURCE_ROOT; };
+		CDD3DB881FD86339009FB913 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Position.swift; path = Source/Position.swift; sourceTree = SOURCE_ROOT; };
 		CDF3F9911EB08A5300305DF4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Source/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		CDF3F9931EB08A5300305DF4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = SOURCE_ROOT; };
 		CDF3F99A1EB08A5C00305DF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Source/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
@@ -177,6 +181,8 @@
 				CD6FDB2A1EF1D6B400C16CB5 /* Event.swift */,
 				CD6FDB221EF1D67E00C16CB5 /* EventListViewController.swift */,
 				CD6FDB241EF1D68900C16CB5 /* EventViewController.swift */,
+				CDD3DB881FD86339009FB913 /* Position.swift */,
+				CDD3DB861FD85AB1009FB913 /* PositionViewController.swift */,
 			);
 			name = Event;
 			sourceTree = "<group>";
@@ -334,6 +340,7 @@
 				CD0F77111EFA78790091BD0C /* UIAlertController.swift in Sources */,
 				CD0F77121EFA78790091BD0C /* UIImage.swift in Sources */,
 				CD6FDB291EF1D6A900C16CB5 /* Sponsor.swift in Sources */,
+				CDD3DB891FD86339009FB913 /* Position.swift in Sources */,
 				CD0F77071EFA77E20091BD0C /* UIColor.swift in Sources */,
 				CD6725281F08951100680250 /* UIStoryboard.swift in Sources */,
 				CD67252D1F08A7E000680250 /* UITableView.swift in Sources */,
@@ -343,6 +350,7 @@
 				CD6725311F08ADF200680250 /* UINavigationController.swift in Sources */,
 				CDF3F9951EB08A5300305DF4 /* AppDelegate.swift in Sources */,
 				CDD3DB851FD85554009FB913 /* UIImageView.swift in Sources */,
+				CDD3DB871FD85AB1009FB913 /* PositionViewController.swift in Sources */,
 				CD6FDB231EF1D67E00C16CB5 /* EventListViewController.swift in Sources */,
 				CDD3DB811FD84F5A009FB913 /* ImageTextListViewController.swift in Sources */,
 				CD5921BC1EF289950004B77B /* User.swift in Sources */,

@@ -15,6 +15,7 @@ extension UIStoryboard {
     case Profile = "ProfileViewController"
     case Event = "EventViewController"
     case ImageTextList = "ImageTextListViewController"
+    case Position = "PositionViewController"
   }
   
   /// Get a view controller instance for the given storyboard id

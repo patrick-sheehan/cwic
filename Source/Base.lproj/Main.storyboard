@@ -166,6 +166,40 @@
             </objects>
             <point key="canvasLocation" x="33.75" y="-578.75"/>
         </scene>
+        <!--Position View Controller-->
+        <scene sceneID="OkJ-kK-4SF">
+            <objects>
+                <viewController storyboardIdentifier="PositionViewController" id="CRT-4L-4n9" customClass="PositionViewController" customModule="CWIC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eyR-CK-4FW"/>
+                        <viewControllerLayoutGuide type="bottom" id="cp5-lo-eUt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hHY-Dy-fbg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hEc-Ar-Xpd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hEc-Ar-Xpd" firstAttribute="top" secondItem="eyR-CK-4FW" secondAttribute="bottom" id="INd-PF-5oP"/>
+                            <constraint firstItem="cp5-lo-eUt" firstAttribute="top" secondItem="hEc-Ar-Xpd" secondAttribute="bottom" id="ct3-ra-vw7"/>
+                            <constraint firstAttribute="trailing" secondItem="hEc-Ar-Xpd" secondAttribute="trailing" id="fNe-EI-y5t"/>
+                            <constraint firstItem="hEc-Ar-Xpd" firstAttribute="leading" secondItem="hHY-Dy-fbg" secondAttribute="leading" id="mdt-qb-0Ts"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="mapView" destination="hEc-Ar-Xpd" id="fVH-rZ-Qmd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tNA-ie-Kmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1168.125" y="-545"/>
+        </scene>
         <!--Image Text List View Controller-->
         <scene sceneID="lHl-tk-w8C">
             <objects>
