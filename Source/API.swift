@@ -6,40 +6,33 @@
 //  Copyright © 2017 Síocháin Solutions. All rights reserved.
 //
 
-import SwiftyJSON
-
+import Foundation
 
 class API {
   
-  static func getSponsors(_ completion: (_ sponsors: [Sponsor]) -> Void) {
+  static func get(uri: String, _ completion: @escaping (_ encodedData: Data) -> Void) {
+    let urlString = "http://127.0.0.1:8000/" + uri
+    guard let url = URL(string: urlString) else { return }
     
-    if let path = Bundle.main.path(forResource: "sponsors", ofType: "json") {
-      do {
-        let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
-        let jsonObj = try JSON(data: data)
-        if jsonObj != JSON.null {
-          if let arr = jsonObj.array {
-            
-            let sponsors = arr.map{
-              Sponsor($0["name"].stringValue,
-                      imageName: $0["image"].stringValue,
-                      about: $0["about"].string)
-            }
-            
-            completion(sponsors)
-          }
-        } else {
-          print("Could not get json from file, make sure that file contains valid json.")
-        }
-      } catch let error {
-        print(error.localizedDescription)
+    let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+      if error != nil {
+        print(error!.localizedDescription)
       }
-    } else {
-      print("Invalid filename/path.")
+      if let data = data {
+        completion(data)
+      }
     }
-    
-    
-    
+    task.resume()
+  }
+  
+  static func getSponsors(_ completion: @escaping (_ sponsors: [Sponsor]) -> Void) {
+    API.get(uri: "sponsors") { data in
+      do {
+        let sponsorList = try JSONDecoder().decode(SponsorList.self, from: data)
+        completion(sponsorList.results)
+      } catch let jsonError {
+        print(jsonError)
+      }
+    }
   }
 }
-
