@@ -21,7 +21,6 @@ class PositionViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // 1)
     mapView.mapType = MKMapType.hybrid
     mapView.showsCompass = true
     mapView.showsScale = true

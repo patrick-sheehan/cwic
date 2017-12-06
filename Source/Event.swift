@@ -19,19 +19,27 @@ struct EventList: Codable {
   let results: [Event]
 }
 
-enum EventType {
-  case sponsor
-  case auction  // Need to let users preview auction items
-  case concert  // Artist should be able to make a concert, and include it in events page
-  case cookoff  // TODO: needs most thought, include recipes,
-  case raffle   // Users can buy raffle tickets through the app
-  case artsCrafts
-  case booth
-  case lake
-  case park
-  case parking
-  case puttPutt
-  case swimmingPool
-  case users        // Want to see where friends are
-  case waterSlide
+struct EventType: Codable {
+  let code: String
+  let name: String
+  
+  init(_ code: String, _ name: String) {
+    self.code = code
+    self.name = name
+  }
+  
+  static let All: [EventType] = [
+    EventType("A", "Arts & Crafts"),
+    EventType("B", "Booth"),
+    EventType("C", "Concert"),        // Artist can create Concert for Events page
+    EventType("G", "Putt Putt Golf"),
+    EventType("I", "Parking"),
+    EventType("K", "Cookoff"),
+    EventType("L", "Lake"),
+    EventType("P", "Park"),
+    EventType("R", "Raffle"),         // Users can buy raffle tickets through the app
+    EventType("S", "Swimming Pool"),
+    EventType("U", "Auction"),        // Need to let users preview auction items
+    EventType("W", "Waterslide"),
+  ]
 }

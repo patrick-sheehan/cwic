@@ -148,8 +148,7 @@
 				CD67252B1F08972100680250 /* Supporting Files */,
 				CDD3DB8B1FD86A87009FB913 /* Other Files */,
 			);
-			name = Source;
-			path = CWIC;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		CD5921B81EF2894C0004B77B /* User */ = {
@@ -199,7 +198,6 @@
 				CDD3DB8D1FD86B16009FB913 /* PositionViewController.swift */,
 			);
 			name = Position;
-			path = CWIC/Position;
 			sourceTree = "<group>";
 		};
 		CDD3DB8B1FD86A87009FB913 /* Other Files */ = {

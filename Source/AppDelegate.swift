@@ -42,13 +42,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     tabBarAppearance.tintColor = .white
     tabBarAppearance.barTintColor = Colors.RoyalBlue
     
-    // Configure main window
+    
+    /// Build Event VCs
+    let allEventsVC = EventListViewController(title: "Events", uri: API.getEventsUriHelper(), showFilterButton: true)
+    let trendingEventsVC = EventListViewController(title: "Trending", uri: API.getEventsUriHelper(filter: .trending))
+    let starredEventsVC = EventListViewController(title: "Starred", uri: API.getEventsUriHelper(filter: .starred))
+    
+    /// Configure main window
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.rootViewController = UITabBarController([
+      UINavigationController("Events", .Events, allEventsVC),
+      UINavigationController("Trending", .Events, trendingEventsVC),
+      UINavigationController("Starred", .Events, starredEventsVC),
+      UINavigationController("Sponsors", .Sponsors, SponsorListViewController()),
       UINavigationController("Profile", .Profile, UIStoryboard.getViewController(.Profile)),
-      UINavigationController("Events", .Events, EventListViewController()),
-      UINavigationController("About", .About, EventViewController.create(event: Sponsor.CWIC.event)),
-      UINavigationController("Sponsors", .Sponsors, SponsorListViewController())
     ])
     window?.makeKeyAndVisible()
     

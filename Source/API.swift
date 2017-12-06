@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 class API {
   
   static func get(uri: String, _ completion: @escaping (_ encodedData: Data) -> Void) {
@@ -15,9 +16,7 @@ class API {
     guard let url = URL(string: urlString) else { return }
     
     let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-      if error != nil {
-        print(error!.localizedDescription)
-      }
+      if error != nil { print(error!.localizedDescription) }
       if let data = data {
         completion(data)
       }
@@ -36,9 +35,26 @@ class API {
     }
   }
   
+  enum EventFilterOptions {
+    case starred, trending, type
+  }
   
-  static func getEvents(_ completion: @escaping (_ results: [Event]) -> Void) {
-    API.get(uri: "events") { data in
+  static func getEventsUriHelper(filter: EventFilterOptions? = nil, type: EventType? = nil) -> String {
+    if let filter = filter {
+      switch (filter) {
+      case .starred: return "starredevents"
+      case .trending: return "trendingevents"
+      case .type:
+        if let type = type {
+          return "events/?type=\(type.code)"
+        }
+      }
+    }
+    return "events"
+  }
+  
+  static func getEvents(uri: String, _ completion: @escaping (_ results: [Event]) -> Void) {
+    API.get(uri: uri) { data in
       do {
         let list = try JSONDecoder().decode(EventList.self, from: data)
         completion(list.results)
