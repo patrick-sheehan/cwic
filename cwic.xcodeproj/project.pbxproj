@@ -18,20 +18,19 @@
 		CD6725201F0893BE00680250 /* LucidaGrandeRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD67251F1F0893BE00680250 /* LucidaGrandeRegular.ttf */; };
 		CD6725281F08951100680250 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6725271F08951100680250 /* UIStoryboard.swift */; };
 		CD67252D1F08A7E000680250 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD67252C1F08A7E000680250 /* UITableView.swift */; };
-		CD67252F1F08AD5F00680250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD67252E1F08AD5F00680250 /* Assets.xcassets */; };
 		CD6725311F08ADF200680250 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6725301F08ADF200680250 /* UINavigationController.swift */; };
 		CD6725351F08BD1B00680250 /* UITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6725341F08BD1B00680250 /* UITabBarController.swift */; };
-		CD6725371F08C47F00680250 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6725361F08C47F00680250 /* Action.swift */; };
 		CD6FDB211EF1D66700C16CB5 /* SponsorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB201EF1D66700C16CB5 /* SponsorListViewController.swift */; };
 		CD6FDB231EF1D67E00C16CB5 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB221EF1D67E00C16CB5 /* EventListViewController.swift */; };
-		CD6FDB251EF1D68900C16CB5 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB241EF1D68900C16CB5 /* EventViewController.swift */; };
 		CD6FDB291EF1D6A900C16CB5 /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB281EF1D6A900C16CB5 /* Sponsor.swift */; };
 		CD6FDB2B1EF1D6B400C16CB5 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB2A1EF1D6B400C16CB5 /* Event.swift */; };
 		CDC9FA6F1F0CC00B008FBCB6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9FA6E1F0CC00B008FBCB6 /* API.swift */; };
 		CDD3DB811FD84F5A009FB913 /* ImageTextListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD3DB801FD84F5A009FB913 /* ImageTextListViewController.swift */; };
 		CDD3DB851FD85554009FB913 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD3DB841FD85553009FB913 /* UIImageView.swift */; };
-		CDD3DB871FD85AB1009FB913 /* PositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD3DB861FD85AB1009FB913 /* PositionViewController.swift */; };
-		CDD3DB891FD86339009FB913 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD3DB881FD86339009FB913 /* Position.swift */; };
+		CDD3DB8E1FD86B16009FB913 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD3DB8C1FD86B15009FB913 /* Position.swift */; };
+		CDD3DB8F1FD86B16009FB913 /* PositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD3DB8D1FD86B16009FB913 /* PositionViewController.swift */; };
+		CDD3DB921FD86B20009FB913 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDD3DB901FD86B20009FB913 /* Assets.xcassets */; };
+		CDD3DB931FD86B20009FB913 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD3DB911FD86B20009FB913 /* Action.swift */; };
 		CDF3F9951EB08A5300305DF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3F9911EB08A5300305DF4 /* AppDelegate.swift */; };
 		CDF3F99D1EB08A5C00305DF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF3F9991EB08A5C00305DF4 /* LaunchScreen.storyboard */; };
 		CDF3F99E1EB08A5C00305DF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF3F99B1EB08A5C00305DF4 /* Main.storyboard */; };
@@ -51,20 +50,19 @@
 		CD67251F1F0893BE00680250 /* LucidaGrandeRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = LucidaGrandeRegular.ttf; path = Source/LucidaGrandeRegular.ttf; sourceTree = SOURCE_ROOT; };
 		CD6725271F08951100680250 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIStoryboard.swift; path = Source/UIStoryboard.swift; sourceTree = SOURCE_ROOT; };
 		CD67252C1F08A7E000680250 /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableView.swift; path = Source/UITableView.swift; sourceTree = SOURCE_ROOT; };
-		CD67252E1F08AD5F00680250 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Source/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		CD6725301F08ADF200680250 /* UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UINavigationController.swift; path = Source/UINavigationController.swift; sourceTree = SOURCE_ROOT; };
 		CD6725341F08BD1B00680250 /* UITabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITabBarController.swift; path = Source/UITabBarController.swift; sourceTree = SOURCE_ROOT; };
-		CD6725361F08C47F00680250 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Action.swift; path = Source/Action.swift; sourceTree = SOURCE_ROOT; };
 		CD6FDB201EF1D66700C16CB5 /* SponsorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SponsorListViewController.swift; path = Source/SponsorListViewController.swift; sourceTree = SOURCE_ROOT; };
 		CD6FDB221EF1D67E00C16CB5 /* EventListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventListViewController.swift; path = Source/EventListViewController.swift; sourceTree = SOURCE_ROOT; };
-		CD6FDB241EF1D68900C16CB5 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventViewController.swift; path = Source/EventViewController.swift; sourceTree = SOURCE_ROOT; };
 		CD6FDB281EF1D6A900C16CB5 /* Sponsor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sponsor.swift; path = Source/Sponsor.swift; sourceTree = SOURCE_ROOT; };
 		CD6FDB2A1EF1D6B400C16CB5 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = Source/Event.swift; sourceTree = SOURCE_ROOT; };
 		CDC9FA6E1F0CC00B008FBCB6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = Source/API.swift; sourceTree = SOURCE_ROOT; };
 		CDD3DB801FD84F5A009FB913 /* ImageTextListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageTextListViewController.swift; path = Source/ImageTextListViewController.swift; sourceTree = SOURCE_ROOT; };
 		CDD3DB841FD85553009FB913 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageView.swift; path = Source/UIImageView.swift; sourceTree = SOURCE_ROOT; };
-		CDD3DB861FD85AB1009FB913 /* PositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PositionViewController.swift; path = Source/PositionViewController.swift; sourceTree = SOURCE_ROOT; };
-		CDD3DB881FD86339009FB913 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Position.swift; path = Source/Position.swift; sourceTree = SOURCE_ROOT; };
+		CDD3DB8C1FD86B15009FB913 /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Position.swift; path = Source/Position.swift; sourceTree = SOURCE_ROOT; };
+		CDD3DB8D1FD86B16009FB913 /* PositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PositionViewController.swift; path = Source/PositionViewController.swift; sourceTree = SOURCE_ROOT; };
+		CDD3DB901FD86B20009FB913 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Source/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		CDD3DB911FD86B20009FB913 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Action.swift; path = Source/Action.swift; sourceTree = SOURCE_ROOT; };
 		CDF3F9911EB08A5300305DF4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Source/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		CDF3F9931EB08A5300305DF4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = SOURCE_ROOT; };
 		CDF3F99A1EB08A5C00305DF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Source/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
@@ -122,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				CD1D70F31EB088BE007C80CE /* Source */,
-				CD67252B1F08972100680250 /* Supporting Files */,
 				CD1D70F21EB088BE007C80CE /* Products */,
 				0EC4444F072D83B7B62C6B1A /* Pods */,
 				45A03D098B4A98069DECD4E5 /* Frameworks */,
@@ -140,39 +137,41 @@
 		CD1D70F31EB088BE007C80CE /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				CDF3F99B1EB08A5C00305DF4 /* Main.storyboard */,
 				CDC9FA6E1F0CC00B008FBCB6 /* API.swift */,
 				CDF3F9911EB08A5300305DF4 /* AppDelegate.swift */,
 				CDD3DB801FD84F5A009FB913 /* ImageTextListViewController.swift */,
-				CD5921B81EF2894C0004B77B /* Account */,
 				CD6FDB181EF1D21D00C16CB5 /* Event */,
+				CDD3DB8A1FD86A69009FB913 /* Position */,
 				CD6FDB191EF1D23000C16CB5 /* Sponsor */,
-				CD0F77031EFA77AE0091BD0C /* Extension */,
-				CD6725361F08C47F00680250 /* Action.swift */,
+				CD5921B81EF2894C0004B77B /* User */,
+				CDF3F99B1EB08A5C00305DF4 /* Main.storyboard */,
+				CD67252B1F08972100680250 /* Supporting Files */,
+				CDD3DB8B1FD86A87009FB913 /* Other Files */,
 			);
 			name = Source;
 			path = CWIC;
 			sourceTree = "<group>";
 		};
-		CD5921B81EF2894C0004B77B /* Account */ = {
+		CD5921B81EF2894C0004B77B /* User */ = {
 			isa = PBXGroup;
 			children = (
 				CD5921BB1EF289950004B77B /* User.swift */,
 				CD5921BD1EF295290004B77B /* ProfileViewController.swift */,
 			);
-			name = Account;
+			name = User;
 			sourceTree = "<group>";
 		};
 		CD67252B1F08972100680250 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CD67252E1F08AD5F00680250 /* Assets.xcassets */,
+				CDD3DB911FD86B20009FB913 /* Action.swift */,
+				CD0F77031EFA77AE0091BD0C /* Extension */,
+				CDD3DB901FD86B20009FB913 /* Assets.xcassets */,
 				CD67251F1F0893BE00680250 /* LucidaGrandeRegular.ttf */,
 				CDF3F9991EB08A5C00305DF4 /* LaunchScreen.storyboard */,
 				CDF3F9931EB08A5300305DF4 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			path = CWIC;
 			sourceTree = "<group>";
 		};
 		CD6FDB181EF1D21D00C16CB5 /* Event */ = {
@@ -180,9 +179,6 @@
 			children = (
 				CD6FDB2A1EF1D6B400C16CB5 /* Event.swift */,
 				CD6FDB221EF1D67E00C16CB5 /* EventListViewController.swift */,
-				CD6FDB241EF1D68900C16CB5 /* EventViewController.swift */,
-				CDD3DB881FD86339009FB913 /* Position.swift */,
-				CDD3DB861FD85AB1009FB913 /* PositionViewController.swift */,
 			);
 			name = Event;
 			sourceTree = "<group>";
@@ -194,6 +190,23 @@
 				CD6FDB201EF1D66700C16CB5 /* SponsorListViewController.swift */,
 			);
 			name = Sponsor;
+			sourceTree = "<group>";
+		};
+		CDD3DB8A1FD86A69009FB913 /* Position */ = {
+			isa = PBXGroup;
+			children = (
+				CDD3DB8C1FD86B15009FB913 /* Position.swift */,
+				CDD3DB8D1FD86B16009FB913 /* PositionViewController.swift */,
+			);
+			name = Position;
+			path = CWIC/Position;
+			sourceTree = "<group>";
+		};
+		CDD3DB8B1FD86A87009FB913 /* Other Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Other Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +276,7 @@
 				CDF3F99D1EB08A5C00305DF4 /* LaunchScreen.storyboard in Resources */,
 				CD6725201F0893BE00680250 /* LucidaGrandeRegular.ttf in Resources */,
 				CDF3F99E1EB08A5C00305DF4 /* Main.storyboard in Resources */,
-				CD67252F1F08AD5F00680250 /* Assets.xcassets in Resources */,
+				CDD3DB921FD86B20009FB913 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,27 +347,26 @@
 			files = (
 				CD0F77101EFA78790091BD0C /* String.swift in Sources */,
 				CDC9FA6F1F0CC00B008FBCB6 /* API.swift in Sources */,
-				CD6725371F08C47F00680250 /* Action.swift in Sources */,
 				CD6FDB211EF1D66700C16CB5 /* SponsorListViewController.swift in Sources */,
 				CD6FDB2B1EF1D6B400C16CB5 /* Event.swift in Sources */,
 				CD0F77111EFA78790091BD0C /* UIAlertController.swift in Sources */,
 				CD0F77121EFA78790091BD0C /* UIImage.swift in Sources */,
+				CDD3DB931FD86B20009FB913 /* Action.swift in Sources */,
 				CD6FDB291EF1D6A900C16CB5 /* Sponsor.swift in Sources */,
-				CDD3DB891FD86339009FB913 /* Position.swift in Sources */,
 				CD0F77071EFA77E20091BD0C /* UIColor.swift in Sources */,
 				CD6725281F08951100680250 /* UIStoryboard.swift in Sources */,
 				CD67252D1F08A7E000680250 /* UITableView.swift in Sources */,
 				CD5921BE1EF295290004B77B /* ProfileViewController.swift in Sources */,
 				CD0F77151EFA78790091BD0C /* UIViewController.swift in Sources */,
 				CD6725351F08BD1B00680250 /* UITabBarController.swift in Sources */,
+				CDD3DB8E1FD86B16009FB913 /* Position.swift in Sources */,
 				CD6725311F08ADF200680250 /* UINavigationController.swift in Sources */,
 				CDF3F9951EB08A5300305DF4 /* AppDelegate.swift in Sources */,
+				CDD3DB8F1FD86B16009FB913 /* PositionViewController.swift in Sources */,
 				CDD3DB851FD85554009FB913 /* UIImageView.swift in Sources */,
-				CDD3DB871FD85AB1009FB913 /* PositionViewController.swift in Sources */,
 				CD6FDB231EF1D67E00C16CB5 /* EventListViewController.swift in Sources */,
 				CDD3DB811FD84F5A009FB913 /* ImageTextListViewController.swift in Sources */,
 				CD5921BC1EF289950004B77B /* User.swift in Sources */,
-				CD6FDB251EF1D68900C16CB5 /* EventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

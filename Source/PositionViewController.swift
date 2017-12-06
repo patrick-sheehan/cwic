@@ -16,7 +16,7 @@ class PositionViewController: UIViewController {
   
   var position: Position?
   var positionTitle = "Event Location"
-  var positionSubtitle = "Details"
+  var positionSubtitle = ""
   
   override func viewDidLoad() {
     super.viewDidLoad()
