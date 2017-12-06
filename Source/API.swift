@@ -25,11 +25,23 @@ class API {
     task.resume()
   }
   
-  static func getSponsors(_ completion: @escaping (_ sponsors: [Sponsor]) -> Void) {
+  static func getSponsors(_ completion: @escaping (_ results: [Sponsor]) -> Void) {
     API.get(uri: "sponsors") { data in
       do {
-        let sponsorList = try JSONDecoder().decode(SponsorList.self, from: data)
-        completion(sponsorList.results)
+        let list = try JSONDecoder().decode(SponsorList.self, from: data)
+        completion(list.results)
+      } catch let jsonError {
+        print(jsonError)
+      }
+    }
+  }
+  
+  
+  static func getEvents(_ completion: @escaping (_ results: [Event]) -> Void) {
+    API.get(uri: "events") { data in
+      do {
+        let list = try JSONDecoder().decode(EventList.self, from: data)
+        completion(list.results)
       } catch let jsonError {
         print(jsonError)
       }

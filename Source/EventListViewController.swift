@@ -12,7 +12,7 @@ class EventListViewController: UITableViewController {
   
   // MARK: - Member Variables
   
-  let events = Event.examples
+  var events: [Event] = []
   
   
   // MARK: - View Lifecycle
@@ -23,6 +23,18 @@ class EventListViewController: UITableViewController {
     navigationItem.title = "Events"
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    API.getEvents { results in
+      DispatchQueue.main.async {
+        self.events = results
+        self.tableView?.reloadData()
+      }
+    }
+  }
+  
+  
   
   // MARK: - Table view data source
   
@@ -31,7 +43,7 @@ class EventListViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    return tableView.defaultCell(events[indexPath.row].description, canSelect: true)
+    return tableView.defaultCell(events[indexPath.row].title, canSelect: true)
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
