@@ -51,6 +51,7 @@ class SponsorListViewController: UITableViewController {
     
     vc.title = sponsor.name
     vc.imageLink = sponsor.logo
+    vc.text = sponsor.description
     
     navigationController?.pushViewController(vc, animated: true)
   }
