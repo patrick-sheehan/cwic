@@ -14,6 +14,7 @@ extension UIStoryboard {
   enum Id: String {
     case Profile = "ProfileViewController"
     case Event = "EventViewController"
+    case ImageTextList = "ImageTextListViewController"
   }
   
   /// Get a view controller instance for the given storyboard id

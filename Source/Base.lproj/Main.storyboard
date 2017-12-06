@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Yt-mC-QU4">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="91"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marcus.png" translatesAutoresizingMaskIntoConstraints="NO" id="0LS-N6-Jlq">
                                         <rect key="frame" x="8" y="8" width="75" height="75"/>
@@ -69,7 +70,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OcA-Rz-N7h">
-                                <rect key="frame" x="0.0" y="91" width="320" height="389"/>
+                                <rect key="frame" x="0.0" y="111" width="320" height="369"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
@@ -114,13 +115,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cwic-large.png" translatesAutoresizingMaskIntoConstraints="NO" id="jAl-QM-2YW">
-                                <rect key="frame" x="12" y="12" width="296" height="158"/>
+                                <rect key="frame" x="12" y="32" width="296" height="158"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jAl-QM-2YW" secondAttribute="height" multiplier="15:8" id="Lzd-p1-0JX"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vX5-fp-cOB">
-                                <rect key="frame" x="9" y="178" width="302" height="80"/>
+                                <rect key="frame" x="9" y="198" width="302" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="VAI-uK-b2J"/>
@@ -130,7 +131,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="avb-8F-EQ6">
-                                <rect key="frame" x="0.0" y="266" width="320" height="214"/>
+                                <rect key="frame" x="0.0" y="286" width="320" height="194"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
@@ -162,6 +163,70 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f9H-fL-FJs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.75" y="-578.75"/>
+        </scene>
+        <!--Image Text List View Controller-->
+        <scene sceneID="lHl-tk-w8C">
+            <objects>
+                <viewController storyboardIdentifier="ImageTextListViewController" id="xS1-tK-tko" customClass="ImageTextListViewController" customModule="CWIC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i6b-UO-zK0"/>
+                        <viewControllerLayoutGuide type="bottom" id="zkm-Al-yt0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HzY-Ag-jql">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7db-hH-TV3">
+                                <rect key="frame" x="12" y="32" width="296" height="158"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7db-hH-TV3" secondAttribute="height" multiplier="15:8" id="sUs-2h-X0U"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qlD-yJ-hmZ">
+                                <rect key="frame" x="9" y="198" width="302" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="JR2-hc-tx9"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a6i-sp-R2G">
+                                <rect key="frame" x="0.0" y="286" width="320" height="194"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zkm-Al-yt0" firstAttribute="top" secondItem="a6i-sp-R2G" secondAttribute="bottom" id="2vo-ee-rca"/>
+                            <constraint firstAttribute="trailing" secondItem="qlD-yJ-hmZ" secondAttribute="trailing" constant="9" id="MtT-PR-QmS"/>
+                            <constraint firstItem="a6i-sp-R2G" firstAttribute="top" secondItem="qlD-yJ-hmZ" secondAttribute="bottom" constant="8" id="Oez-sW-16R"/>
+                            <constraint firstItem="qlD-yJ-hmZ" firstAttribute="leading" secondItem="HzY-Ag-jql" secondAttribute="leading" constant="9" id="Pov-OG-vGc"/>
+                            <constraint firstItem="qlD-yJ-hmZ" firstAttribute="top" secondItem="7db-hH-TV3" secondAttribute="bottom" constant="8" id="YXr-Az-fSV"/>
+                            <constraint firstItem="7db-hH-TV3" firstAttribute="top" secondItem="i6b-UO-zK0" secondAttribute="bottom" constant="12" id="YkQ-E0-g2L"/>
+                            <constraint firstItem="7db-hH-TV3" firstAttribute="leading" secondItem="HzY-Ag-jql" secondAttribute="leading" constant="12" id="Z9a-Wm-Biw"/>
+                            <constraint firstItem="a6i-sp-R2G" firstAttribute="leading" secondItem="HzY-Ag-jql" secondAttribute="leading" id="dGV-hb-k9J"/>
+                            <constraint firstAttribute="trailing" secondItem="7db-hH-TV3" secondAttribute="trailing" constant="12" id="dZn-c9-oXJ"/>
+                            <constraint firstAttribute="trailing" secondItem="a6i-sp-R2G" secondAttribute="trailing" id="ldJ-cn-40N"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="480"/>
+                    <connections>
+                        <outlet property="imageView" destination="7db-hH-TV3" id="uxN-SW-YPi"/>
+                        <outlet property="tableView" destination="a6i-sp-R2G" id="gGF-b7-07C"/>
+                        <outlet property="textView" destination="qlD-yJ-hmZ" id="byj-PV-z7s"/>
+                        <outlet property="textViewHeight" destination="JR2-hc-tx9" id="D9s-UI-IR0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t6J-bA-Jit" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="33.75" y="-578.75"/>
         </scene>
