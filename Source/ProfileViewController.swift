@@ -6,55 +6,45 @@
 //  Copyright © 2017 Síocháin Solutions. All rights reserved.
 //
 
-import UIKit
+import SJSegmentedScrollView
 
-class ProfileViewController: UIViewController {
+class ProfileViewController {
   
-  @IBOutlet weak var imageView: UIImageView!
-  @IBOutlet weak var usernameLabel: UILabel!
-  @IBOutlet weak var viewTrophiesButton: UIButton!
-  @IBOutlet weak var tableView: UITableView!
-  
-  lazy var actions: [Action] = {
+  class var listSegments: [UITableViewController] {
     return [
-      Action("Edit Profile", viewController: self),
-      Action("My Tickets", viewController: self),
-      Action("My Pages", viewController: self),
-      Action("Send Push Notification", viewController: self),
-      Action("Become a Judge", viewController: self)
+      TrophyListViewController(),
+      EventListViewController()
     ]
-  }()
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    tableView.dataSource = self
-    tableView.delegate = self
-    
-    navigationItem.title = "My Profile"
-    
-    viewTrophiesButton.addTarget(self, action: #selector(viewTrophies), for: .touchUpInside)
   }
   
-  func viewTrophies() {
-    showPopupInfo("'Trophies' coming soon!")
+  class func generate(delegate: AuthDelegate) -> UIViewController {
+    let header = UIViewController.create("ProfileHeaderViewController") as! ProfileHeaderViewController
+    header.delegate = delegate
+    
+    let segmentView = SJSegmentedViewController(headerViewController: header, segmentControllers: listSegments)
+    segmentView.title = "Profile"
+    segmentView.headerViewHeight = 80.0
+    segmentView.headerViewOffsetHeight = -80.0
+    segmentView.selectedSegmentViewColor = .white
+    segmentView.segmentBackgroundColor = Cwic.Blue
+    segmentView.segmentTitleColor = .white
+    segmentView.segmentTitleFont = Cwic.Font
+    segmentView.navigationItem.rightBarButtonItem = UIBarButtonItem(
+      title: "Edit", style: .plain, target: header,
+      action: #selector(ProfileHeaderViewController.viewEdit))
+    segmentView.navigationItem.leftBarButtonItem = UIBarButtonItem(
+      title: "Logout", style: .plain, target: delegate,
+      action: #selector(AuthDelegate.goToLogin))
+    return segmentView
   }
 }
+//  lazy var actions: [Action] = {
+//    return [
+//      Action("Edit Profile", viewController: self),
+//      Action("My Tickets", viewController: self),
+//      Action("My Pages", viewController: self),
+//      Action("Send Push Notification", viewController: self),
+//      Action("Become a Judge", viewController: self)
+//    ]
+//  }()
 
-extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
-  
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return actions.count
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    return tableView.defaultCell(actions[indexPath.row])
-  }
-  
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let action = actions[indexPath.row]
-    showPopupInfo("'\(action)' coming soon!")
-    
-    tableView.deselectRow(at: indexPath, animated: true)
-  }
-}
