@@ -13,7 +13,6 @@ extension UIStoryboard {
   /// Main.storyboard identifiers for custom ViewControllers
   enum Id: String {
     case Profile = "ProfileViewController"
-    case ImageTextList = "ImageTextListViewController"
     case Position = "PositionViewController"
   }
   

@@ -10,12 +10,8 @@ import UIKit
 
 extension UINavigationController {
     
-  convenience init(_ title: String, _ image: UIImage?, _ root: UIViewController) {
-    
+  convenience init(_ title: String, _ image: UIImage, _ root: UIViewController) {
     self.init(rootViewController: root)
-    
-    tabBarItem = UITabBarItem(title: title,
-                              image: image?.withRenderingMode(.alwaysOriginal),
-                              selectedImage: image)
+    tabBarItem = UITabBarItem(title: title, image: image, selectedImage: image)
   }
 }

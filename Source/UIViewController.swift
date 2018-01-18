@@ -12,6 +12,11 @@ import Toaster
 
 extension UIViewController {
 
+  class func create(_ storyboardId: String) -> UIViewController {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    return storyboard.instantiateViewController(withIdentifier: storyboardId)
+  }
+  
   func dismiss() {
     let _ = navigationController?.popViewController(animated: true)
   }
