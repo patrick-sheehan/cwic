@@ -32,7 +32,6 @@
 		CD26DAC2200C6D0D00CDBED8 /* TrophyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD26DAC1200C6D0D00CDBED8 /* TrophyListViewController.swift */; };
 		CD26DAC5200C6D2E00CDBED8 /* Trophy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD26DAC4200C6D2E00CDBED8 /* Trophy.swift */; };
 		CD5921BC1EF289950004B77B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5921BB1EF289950004B77B /* User.swift */; };
-		CD5921BE1EF295290004B77B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5921BD1EF295290004B77B /* ProfileViewController.swift */; };
 		CD5EF9B220113D7B001A9385 /* CommitteeMemberListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5EF9B120113D7B001A9385 /* CommitteeMemberListViewController.swift */; };
 		CD6725201F0893BE00680250 /* LucidaGrandeRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD67251F1F0893BE00680250 /* LucidaGrandeRegular.ttf */; };
 		CD6725281F08951100680250 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6725271F08951100680250 /* UIStoryboard.swift */; };
@@ -82,7 +81,6 @@
 		CD26DAC1200C6D0D00CDBED8 /* TrophyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrophyListViewController.swift; sourceTree = "<group>"; };
 		CD26DAC4200C6D2E00CDBED8 /* Trophy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trophy.swift; sourceTree = "<group>"; };
 		CD5921BB1EF289950004B77B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Source/User.swift; sourceTree = SOURCE_ROOT; };
-		CD5921BD1EF295290004B77B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Source/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		CD5EF9B120113D7B001A9385 /* CommitteeMemberListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitteeMemberListViewController.swift; sourceTree = "<group>"; };
 		CD67251F1F0893BE00680250 /* LucidaGrandeRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = LucidaGrandeRegular.ttf; path = Source/LucidaGrandeRegular.ttf; sourceTree = SOURCE_ROOT; };
 		CD6725271F08951100680250 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIStoryboard.swift; path = Source/UIStoryboard.swift; sourceTree = SOURCE_ROOT; };
@@ -203,7 +201,6 @@
 			isa = PBXGroup;
 			children = (
 				CD26DA9B200C0CF500CDBED8 /* ProfileHeaderViewController.swift */,
-				CD5921BD1EF295290004B77B /* ProfileViewController.swift */,
 				CD26DABF200C5AD200CDBED8 /* ProfileFormViewController.swift */,
 			);
 			name = Profile;
@@ -490,7 +487,6 @@
 				CD26DAC0200C5AD200CDBED8 /* ProfileFormViewController.swift in Sources */,
 				CD26DAAD200C140900CDBED8 /* UIView.swift in Sources */,
 				CD26DAA6200C0E0700CDBED8 /* UserService.swift in Sources */,
-				CD5921BE1EF295290004B77B /* ProfileViewController.swift in Sources */,
 				CD0F77151EFA78790091BD0C /* UIViewController.swift in Sources */,
 				CD26DAC2200C6D0D00CDBED8 /* TrophyListViewController.swift in Sources */,
 				CD6725351F08BD1B00680250 /* UITabBarController.swift in Sources */,

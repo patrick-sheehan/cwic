@@ -20,6 +20,11 @@ class AboutCwicViewController: UIViewController {
   @IBOutlet weak var twitterButton: UIButton!
   @IBOutlet weak var mailingListButton: UIButton!
   
+  
+  class func generate() -> UIViewController {
+    return UIViewController.create("AboutCwicViewController")
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     

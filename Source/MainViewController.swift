@@ -31,9 +31,8 @@ class MainViewController: UITabBarController {
     registerVC.authDelegate = self
     
     viewControllers = [
-//      UINavigationController("Profile", TabImages.Profile, UIViewController.create("ProfileHeaderViewController") as! ProfileHeaderViewController),
-//      UINavigationController("Profile", TabImages.Profile, ProfileViewController.generate(delegate: self)),
-      UINavigationController("About", TabImages.About, UIViewController.create("AboutCwicViewController")), // as! AboutCwicViewController),
+      UINavigationController("Profile", TabImages.Profile, ProfileViewController.generate(delegate: self)),
+      UINavigationController("About", TabImages.About, AboutCwicViewController.generate()),
       UINavigationController("Events", TabImages.Events, EventListViewController()),
       UINavigationController("Sponsors", TabImages.Sponsors, SponsorListViewController()),
     ]

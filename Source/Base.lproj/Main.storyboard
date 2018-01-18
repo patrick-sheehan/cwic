@@ -47,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNA-ie-Kmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1168.125" y="-545"/>
+            <point key="canvasLocation" x="-90" y="309"/>
         </scene>
         <!--Sponsor Detail View Controller-->
         <scene sceneID="lHl-tk-w8C">
@@ -111,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6J-bA-Jit" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="186" y="-516"/>
+            <point key="canvasLocation" x="-814" y="1095"/>
         </scene>
         <!--Profile Header View Controller-->
         <scene sceneID="H36-zB-ODf">
@@ -122,57 +122,66 @@
                         <viewControllerLayoutGuide type="bottom" id="bbT-7F-KXZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="39K-Jh-oqb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="1YA-0p-0lb">
-                                <rect key="frame" x="8" y="8" width="64" height="64"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <gestureRecognizers/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yye-qZ-8ER">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="1YA-0p-0lb">
+                                        <rect key="frame" x="8" y="8" width="64" height="64"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="1YA-0p-0lb" secondAttribute="height" multiplier="1:1" id="qHY-DD-ckN"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="byv-jI-KpC" appends="YES" id="NJz-22-y4i"/>
+                                        </connections>
+                                    </imageView>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hip-tT-BpA">
+                                        <rect key="frame" x="84" y="8" width="216" height="35"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="r0l-dp-ksC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="20"/>
+                                        <color key="textColor" red="0.12156862745098039" green="0.066666666666666666" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visitor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AlN-Fe-gwb" userLabel="User Type Label">
+                                        <rect key="frame" x="84" y="51" width="216" height="21"/>
+                                        <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="15"/>
+                                        <color key="textColor" red="0.1215686275" green="0.066666666669999999" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="1YA-0p-0lb" secondAttribute="height" multiplier="1:1" id="qHY-DD-ckN"/>
+                                    <constraint firstItem="hip-tT-BpA" firstAttribute="leading" secondItem="1YA-0p-0lb" secondAttribute="trailing" constant="12" id="4Yq-qn-8UV"/>
+                                    <constraint firstItem="AlN-Fe-gwb" firstAttribute="leading" secondItem="hip-tT-BpA" secondAttribute="leading" id="AfR-aB-PSe"/>
+                                    <constraint firstItem="1YA-0p-0lb" firstAttribute="top" secondItem="yye-qZ-8ER" secondAttribute="top" constant="8" id="DLN-TE-r3V"/>
+                                    <constraint firstItem="AlN-Fe-gwb" firstAttribute="trailing" secondItem="hip-tT-BpA" secondAttribute="trailing" id="SGM-cE-LP6"/>
+                                    <constraint firstAttribute="bottom" secondItem="1YA-0p-0lb" secondAttribute="bottom" constant="8" id="UaS-0l-Nd2"/>
+                                    <constraint firstItem="hip-tT-BpA" firstAttribute="top" secondItem="1YA-0p-0lb" secondAttribute="top" id="aMG-qp-h6z"/>
+                                    <constraint firstAttribute="height" constant="80" id="dlX-Io-l35"/>
+                                    <constraint firstItem="1YA-0p-0lb" firstAttribute="leading" secondItem="yye-qZ-8ER" secondAttribute="leading" constant="8" id="eti-9D-6yp"/>
+                                    <constraint firstItem="AlN-Fe-gwb" firstAttribute="bottom" secondItem="1YA-0p-0lb" secondAttribute="bottom" id="sR8-qs-HSc"/>
+                                    <constraint firstAttribute="trailing" secondItem="hip-tT-BpA" secondAttribute="trailing" constant="20" id="tF4-h6-Lmd"/>
+                                    <constraint firstItem="AlN-Fe-gwb" firstAttribute="top" secondItem="hip-tT-BpA" secondAttribute="bottom" constant="8" id="uFa-0A-siD"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="byv-jI-KpC" appends="YES" id="NJz-22-y4i"/>
-                                </connections>
-                            </imageView>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hip-tT-BpA">
-                                <rect key="frame" x="84" y="8" width="228" height="30"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="r0l-dp-ksC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="20"/>
-                                <color key="textColor" red="0.12156862745098039" green="0.066666666666666666" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visitor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AlN-Fe-gwb" userLabel="User Type Label">
-                                <rect key="frame" x="84" y="52" width="228" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="RTS-Ac-6cB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="15"/>
-                                <color key="textColor" red="0.1215686275" green="0.066666666669999999" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="hip-tT-BpA" secondAttribute="trailing" constant="8" id="7ii-GD-3YO"/>
-                            <constraint firstItem="hip-tT-BpA" firstAttribute="leading" secondItem="1YA-0p-0lb" secondAttribute="trailing" constant="12" id="BeB-ic-j08"/>
-                            <constraint firstItem="bbT-7F-KXZ" firstAttribute="top" secondItem="1YA-0p-0lb" secondAttribute="bottom" constant="8" id="QFO-oy-oLq"/>
-                            <constraint firstItem="AlN-Fe-gwb" firstAttribute="trailing" secondItem="hip-tT-BpA" secondAttribute="trailing" id="RFe-sW-9UA"/>
-                            <constraint firstItem="AlN-Fe-gwb" firstAttribute="leading" secondItem="hip-tT-BpA" secondAttribute="leading" id="Wjw-de-Ywa"/>
-                            <constraint firstItem="AlN-Fe-gwb" firstAttribute="bottom" secondItem="1YA-0p-0lb" secondAttribute="bottom" id="a7F-98-KmE"/>
-                            <constraint firstItem="hip-tT-BpA" firstAttribute="top" secondItem="1YA-0p-0lb" secondAttribute="top" id="kEu-dX-smx"/>
-                            <constraint firstItem="1YA-0p-0lb" firstAttribute="leading" secondItem="39K-Jh-oqb" secondAttribute="leading" constant="8" id="kqS-nD-RWv"/>
-                            <constraint firstItem="1YA-0p-0lb" firstAttribute="top" secondItem="kEI-k6-nWC" secondAttribute="bottom" constant="8" id="ux6-vC-goR"/>
+                            <constraint firstItem="yye-qZ-8ER" firstAttribute="leading" secondItem="39K-Jh-oqb" secondAttribute="leading" id="buq-ea-9vT"/>
+                            <constraint firstItem="yye-qZ-8ER" firstAttribute="top" secondItem="39K-Jh-oqb" secondAttribute="top" id="frm-v2-W53"/>
+                            <constraint firstAttribute="trailing" secondItem="yye-qZ-8ER" secondAttribute="trailing" id="xmI-8K-CQj"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <size key="freeformSize" width="320" height="80"/>
                     <connections>
                         <outlet property="avatarImageView" destination="1YA-0p-0lb" id="jil-51-VSe"/>
                         <outlet property="didTapAvatarGesture" destination="byv-jI-KpC" id="zxA-yl-Bgr"/>
@@ -183,7 +192,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hja-hO-GZg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="byv-jI-KpC"/>
             </objects>
-            <point key="canvasLocation" x="848" y="136"/>
+            <point key="canvasLocation" x="-1683.75" y="58.75"/>
         </scene>
         <!--About Cwic View Controller-->
         <scene sceneID="hEu-PN-Tap">
@@ -230,7 +239,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="74" height="77.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtH-Yc-THc">
-                                                        <rect key="frame" x="8.5" y="11" width="57.5" height="57.5"/>
+                                                        <rect key="frame" x="8.5" y="10" width="57.5" height="57.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="dtH-Yc-THc" secondAttribute="height" multiplier="1:1" id="tNo-TY-BAR"/>
                                                         </constraints>
@@ -270,7 +279,7 @@
                                                 <rect key="frame" x="148" y="0.0" width="74" height="77.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zT-hr-nGe">
-                                                        <rect key="frame" x="8.5" y="11" width="57.5" height="57.5"/>
+                                                        <rect key="frame" x="8.5" y="10" width="57.5" height="57.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="2zT-hr-nGe" secondAttribute="height" multiplier="1:1" id="wLX-Bn-6Fd"/>
                                                         </constraints>
@@ -350,7 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8hZ-2z-Xzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1860" y="137.5"/>
+            <point key="canvasLocation" x="-814" y="-434"/>
         </scene>
         <!--Event Detail View Controller-->
         <scene sceneID="OXQ-wd-5Q5">

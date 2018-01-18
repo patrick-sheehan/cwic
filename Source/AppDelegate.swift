@@ -20,11 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /// Configure navigation bar
     let navigationBarAppearance = UINavigationBar.appearance()
     navigationBarAppearance.tintColor = Cwic.Blue
-    navigationBarAppearance.barTintColor = Cwic.Red
+    navigationBarAppearance.barTintColor = .white
     navigationBarAppearance.isTranslucent = false
     navigationBarAppearance.titleTextAttributes = [
-      NSAttributedStringKey.foregroundColor: Cwic.Red, //UIColor.white,
-      NSAttributedStringKey.font: Cwic.Font
+      NSAttributedStringKey.foregroundColor: Cwic.Blue,
+      NSAttributedStringKey.font: Cwic.Font.withSize(20.0)
     ]
     
     /// Configure tab bar

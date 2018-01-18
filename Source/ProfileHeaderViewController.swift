@@ -1,5 +1,5 @@
 //
-//  ProfileHeaderViewController.swift
+//  ProfileViewController.swift
 //  Conqube
 //
 //  Created by Patrick Sheehan on 7/13/17.
@@ -8,18 +8,32 @@
 
 import UIKit
 
-class ProfileHeaderViewController: UIViewController {
+class ProfileViewController: UIViewController {
   
   // MARK: - Member Variables
   let imagePicker = UIImagePickerController()
   var user: User? = nil
   var delegate: AuthDelegate? = nil
   
+    class var listSegments: [UITableViewController] {
+      return [
+        TrophyListViewController(),
+        EventListViewController()
+      ]
+    }
+  
   // MARK: - IB Outlets
   @IBOutlet weak var usernameLabel: UILabel!
   @IBOutlet weak var userTypeLabel: UILabel!
   @IBOutlet weak var avatarImageView: UIImageView!
   @IBOutlet var didTapAvatarGesture: UITapGestureRecognizer!
+  
+  
+  class func generate(delegate: AuthDelegate) -> ProfileViewController {
+    let vc = UIViewController.create("ProfileViewController") as! ProfileViewController
+    vc.delegate = delegate
+    return vc
+  }
   
   
   // MARK: - View Lifecycle
@@ -34,13 +48,13 @@ class ProfileHeaderViewController: UIViewController {
     
     didTapAvatarGesture.addTarget(self, action: #selector(didTapAvatar))
     
-//    self.navigationItem.rightBarButtonItem = UIBarButtonItem(
-//      title: "Edit", style: .plain, target: self,
-//      action: #selector(viewEdit))
-//    
-//    self.navigationItem.leftBarButtonItem = UIBarButtonItem(
-//          title: "Logout", style: .plain, target: delegate!,
-//          action: #selector(AuthDelegate.goToLogin))
+    self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+      title: "Edit", style: .plain, target: self,
+      action: #selector(viewEdit))
+    
+    self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+          title: "Logout", style: .plain, target: delegate!,
+          action: #selector(AuthDelegate.goToLogin))
   }
   
   @objc func viewEdit() {
@@ -95,7 +109,7 @@ class ProfileHeaderViewController: UIViewController {
 
 
 // MARK: - Image Picker Methods
-extension ProfileHeaderViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
   func imagePickerController(_ picker: UIImagePickerController,
                              didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -117,3 +131,14 @@ extension ProfileHeaderViewController: UIImagePickerControllerDelegate, UINaviga
     dismiss(animated: true, completion: nil)
   }
 }
+
+
+//  lazy var actions: [Action] = {
+//    return [
+//      Action("Edit Profile", viewController: self),
+//      Action("My Tickets", viewController: self),
+//      Action("My Pages", viewController: self),
+//      Action("Send Push Notification", viewController: self),
+//      Action("Become a Judge", viewController: self)
+//    ]
+//  }()
