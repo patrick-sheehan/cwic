@@ -8,87 +8,83 @@
 
 import UIKit
 
-struct Trophy {}
-
-
-enum Gender {
-  case male
-  case female
-  case notSpecified   // 'prefer not to answer'
+class Profile {
+  
+  var avatar: String
+  var birthdate: String
+  var gender: String
+  var hometown: String
+  var how_discovered: String
+  var phone_number: String
+  var user_type: String
+  var years_attended: Int
+  
+  init(json: [String: Any]) {
+    self.avatar = json["avatar"] as? String ?? ""
+    self.hometown = json["hometown"] as? String ?? ""
+    self.years_attended = json["years_attended"] as? Int ?? 0
+    self.how_discovered = json["how_discovered"] as? String ?? ""
+    self.phone_number = json["phone_number"] as? String ?? ""
+    self.birthdate = json["birthdate"] as? String ?? ""
+    self.gender = json["gender_name"] as? String ?? ""
+    self.user_type = json["user_type_name"] as? String ?? ""
+  }
 }
 
-class User: CustomStringConvertible {
-
-  var name: String
-  var image: UIImage?
+class User {
   
-  /// What type of user am I? What access do I have as a result?
-  var userType: UserType = .visitor
-  
-  /// What trophies have I earned?
-  var trophies: [Trophy] = []
-  
-  /// Where am I from?
-  var hometown: String?
-  
-  /// How many years have I been attending?
-  var yearsAttended: Int?
-  
-  /// How did I discover this event?
-  var howDiscovered: String?
-  
-  /// How old am I? (optional)
-  var age: Int?
-  
-  /// What is my gender? (optional)
-  var gender: Gender?
+  var id: Int
+  var username: String
+  var first_name: String
+  var last_name: String
+  var profile: Profile
   
   
-  init(_ name: String, _ image: UIImage? = nil) {
+//  var avatar: String
+//  var birthdate: String
+//  var gender: String
+//  var hometown: String
+//  var how_discovered: String
+//  var phone_number: String
+//  var user_type: String
+//  var years_attended: Int
+  
+  var trophies: [Trophy]
+  
+  init(json: [String: Any]) {
+    self.id = json["id"] as? Int ?? 0
+    self.username = json["username"] as? String ?? ""
+    self.first_name = json["first_name"] as? String ?? ""
+    self.last_name = json["last_name"] as? String ?? ""
     
-    self.name = name
-    self.image = image
+    if let profileJson = json["profile"] as? [String: Any] {
+      self.profile = Profile(json: profileJson)
+    } else {
+      self.profile = Profile(json: [String: Any]())
+    }
+    
+    if let trophiesJson = json["trophies"] as? [[String: Any]] {
+      self.trophies = trophiesJson.map { Trophy(json: $0) }
+    } else {
+      self.trophies = []
+    }
   }
-  
-
-  var description: String {
-    return name
-  }
-  
 }
 
-enum UserType {
-  
-  /// Leader of a cook-off team
-  /// Manages team profile page
-  /// Registers for cook-off
-  /// Adds team members
-  /// Can purchase QR code tickets for whole team
-  case teamLeader
-  
-  /// Member of a coof-off
-  case teamMember
-  
-  /// Admin-type person that is helping to organize/coordinate this event
-  /// Can Push Notify all users if needed (e.g. last minute updates to events
-  case committeeOrganizer
-  
-  /// Guest-type user
-  case visitor
-  
-  /// Person or company that is sponsoring this event
-  /// All users can see list of all sponsors with a detailed profile view
-  case sponsor
-  
-  /// Any user can apply to be a judge (of the chili cook-off).
-  /// Sponsors get preference
-  /// Selected judges are anonymous to others
-  /// User type should be a combination of roles
-  case judge
-  
-  /// Usually a musician that has a very public profile and can update event of music lineup
-  /// Manages page for their concert
-  case artist
-  
-}
 
+let UserTypes: [String: String] = [
+  "Artist": "A",
+  "Committee Member": "C",
+  "Judge": "J",
+  "Team Leader": "L",
+  "Team Member": "M",
+  "Sponsor": "S",
+  "Visitor": "V",
+]
+
+let Genders: [String: String] = [
+  "Male": "M",
+  "Female": "F",
+  "Other": "O",
+  "Unspecifieid": "U"
+]
