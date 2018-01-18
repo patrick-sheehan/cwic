@@ -8,59 +8,40 @@
 
 import UIKit
 
-
-enum Colors {
-  static let Red = UIColor(netHex: 0xCE171F)
-  static let Black = UIColor(netHex: 0x040707)
-  static let RoyalBlue = UIColor(netHex: 0x1F11A5)
-}
-
-enum Fonts {
-  static let Lucida = UIFont(name: "LucidaGrande", size: 16.0)!
-}
-
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
+  let mainViewController = MainViewController()
   
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
     /// Configure navigation bar
     let navigationBarAppearance = UINavigationBar.appearance()
-    navigationBarAppearance.tintColor = .white
-    navigationBarAppearance.barTintColor = Colors.Red
+    navigationBarAppearance.tintColor = Cwic.Blue
+    navigationBarAppearance.barTintColor = Cwic.Red
     navigationBarAppearance.isTranslucent = false
     navigationBarAppearance.titleTextAttributes = [
-      NSForegroundColorAttributeName: UIColor.white,
-      NSFontAttributeName: Fonts.Lucida
+      NSAttributedStringKey.foregroundColor: Cwic.Red, //UIColor.white,
+      NSAttributedStringKey.font: Cwic.Font
     ]
     
     /// Configure tab bar
     let tabBarAppearance = UITabBar.appearance()
     tabBarAppearance.tintColor = .white
-    tabBarAppearance.barTintColor = Colors.RoyalBlue
+    tabBarAppearance.barTintColor = Cwic.Blue
     
     
-    /// Build Event VCs
-    let allEventsVC = EventListViewController(title: "Events", uri: API.getEventsUriHelper(), showFilterButton: true)
-    let trendingEventsVC = EventListViewController(title: "Trending", uri: API.getEventsUriHelper(filter: .trending))
-    let starredEventsVC = EventListViewController(title: "Starred", uri: API.getEventsUriHelper(filter: .starred))
+    ApiService.authDelegate = mainViewController
     
-    /// Configure main window
+    // Load the main tab view controller
+    mainViewController.application = application
     window = UIWindow(frame: UIScreen.main.bounds)
-    window?.rootViewController = UITabBarController([
-      UINavigationController("Events", .Events, allEventsVC),
-      UINavigationController("Trending", .Events, trendingEventsVC),
-      UINavigationController("Starred", .Events, starredEventsVC),
-      UINavigationController("Sponsors", .Sponsors, SponsorListViewController()),
-      UINavigationController("Profile", .Profile, UIStoryboard.getViewController(.Profile)),
-    ])
+    window?.rootViewController = mainViewController
     window?.makeKeyAndVisible()
     
     return true
   }
-  
 }
 
