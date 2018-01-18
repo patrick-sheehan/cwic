@@ -8,38 +8,61 @@
 
 import Foundation
 
-struct Event: Codable {
-  let title: String
-  let description: String
-  let position: Position?
-  let type_verbose: String
-}
-
-struct EventList: Codable {
-  let results: [Event]
-}
-
-struct EventType: Codable {
-  let code: String
-  let name: String
+class Comment {
+  let text: String
+  let creator: String
+  let created: String
   
-  init(_ code: String, _ name: String) {
-    self.code = code
-    self.name = name
+  init(json: [String: Any]) {
+    self.text = json["text"] as! String
+    self.creator = json["creator"] as! String
+    self.created = json["created"] as! String
   }
   
-  static let All: [EventType] = [
-    EventType("A", "Arts & Crafts"),
-    EventType("B", "Booth"),
-    EventType("C", "Concert"),        // Artist can create Concert for Events page
-    EventType("G", "Putt Putt Golf"),
-    EventType("I", "Parking"),
-    EventType("K", "Cookoff"),
-    EventType("L", "Lake"),
-    EventType("P", "Park"),
-    EventType("R", "Raffle"),         // Users can buy raffle tickets through the app
-    EventType("S", "Swimming Pool"),
-    EventType("U", "Auction"),        // Need to let users preview auction items
-    EventType("W", "Waterslide"),
-  ]
+  var creationDescription: String {
+    return "By: \(creator) ... \(created)"
+  }
 }
+
+
+class Event {
+  var id: Int
+  let title: String
+  let description: String
+  let type_verbose: String
+  let image: String
+  let position: Position?
+  let is_starred: Bool
+  let comments: [Comment]
+  
+  init(json: [String: Any]) {
+    self.id = json["id"] as? Int ?? 0
+    self.title = json["title"] as? String ?? ""
+    self.description = json["description"] as? String ?? ""
+    self.type_verbose = json["type_verbose"] as? String ?? ""
+    self.image = json["image"] as? String ?? ""
+    self.position = nil
+    self.is_starred = json["is_starred"] as? Bool ?? false
+    
+    if let commentsJson = json["comments"] as? [[String: Any]] {
+      self.comments = commentsJson.map({ Comment(json: $0) })
+    } else {
+      self.comments = []
+    }
+  }
+}
+
+let Categories: [String: String] = [
+  "Arts & Crafts": "A",
+  "Booth": "B",
+  "Concert": "C",
+  "Putt Putt Golf": "G",
+  "Parking": "I",
+  "Cookoff": "K",
+  "Lake": "L",
+  "Park": "P",
+  "Raffle": "R",
+  "Swimming Pool": "S",
+  "Auction": "U",
+  "Waterslide": "W",
+]

@@ -8,93 +8,140 @@
 
 import UIKit
 
-class EventListViewController: UITableViewController {
+class EventListViewController: UITableViewController, UISearchBarDelegate {
   
   // MARK: - Member Variables
-  
-  var events: [Event] = []
-  var uri: String = API.getEventsUriHelper()
-  
+  private let searchController = UISearchController(searchResultsController: nil)
+  var events = [Event]()
+  var endpointUrl: String = "\(ApiService.BaseURL)/events/"
 
-  // MARK: - Initializer
   
-  convenience init(title: String, uri: String, showFilterButton: Bool = false) {
-    self.init()
-    self.title = title
-    self.uri = uri
-    self.navigationItem.title = self.title
-    self.navigationItem.rightBarButtonItem = showFilterButton ? editButtonItem : nil
+  // MARK: - Networking
+  func didFetch(_ events: [Event]) {
+    DispatchQueue.main.async {
+      self.events = events
+      self.tableView.reloadData()
+    }
+  }
+  
+  @objc func refreshData() {
+    EventService.list(endpointUrl, didFetch(_:))
   }
   
   
   // MARK: - View Lifecycle
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
-    self.fetchData()
+    title = "Events"
+    
+    configureFilterButton()
+    configureSearchBar()
+    
+    tableView.register(EventCell.self, forCellReuseIdentifier: "Cell")
   }
   
-  func fetchData(other_uri: String? = nil) {
-    
-    API.getEvents(uri: other_uri ?? self.uri) { results in
-      DispatchQueue.main.async {
-        self.events = results
-        self.tableView?.reloadData()
-      }
-    }
+  func configureSearchBar() {
+    searchController.searchBar.delegate = self
+    searchController.dimsBackgroundDuringPresentation = false
+    definesPresentationContext = true
+    tableView.tableHeaderView = searchController.searchBar
+  }
+  
+  func configureFilterButton() {
+    navigationItem.leftBarButtonItem = UIBarButtonItem(
+      title: "Category", style: .plain, target: self,
+      action: #selector(selectFilter(_:)))
   }
   
   
-  // MARK: - Table view data source
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    refreshData()
+  }
   
+  
+  // MARK: - Table View Methods
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return events.count
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    return tableView.defaultCell(events[indexPath.row].title, canSelect: true)
+    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? EventCell
+      ?? EventCell(style: .default, reuseIdentifier: "Cell")
+    
+    cell.configureCell(events[indexPath.row])
+    return cell
+  }
+  
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 70
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let vc = UIStoryboard.getViewController(.Position) as! PositionViewController
-    
+//    let vc = UIStoryboard.getViewController(.Position) as! PositionViewController
     let event = events[indexPath.row]
-    vc.position = event.position
-    vc.positionTitle = event.title
-    vc.positionSubtitle = event.type_verbose
-    
+//    vc.position = event.position
+//    vc.positionTitle = event.title
+//    vc.positionSubtitle = event.type_verbose
+    let vc = EventDetailViewController.generate(eventId: event.id)
     navigationController?.pushViewController(vc, animated: true)
   }
   
   
-  // MARK: - Filtering
-  
-  @objc func showDialog(_ sender: UIBarButtonItem) {
-    dialog.popoverPresentationController?.barButtonItem = sender
-    present(dialog, animated: true, completion: nil)
+  // MARK: - Filter Methods
+  @objc func selectFilter(_ sender: UIBarButtonItem) {
+    present(filterDialog, animated: true, completion: nil)
   }
   
-  
-  override var editButtonItem: UIBarButtonItem {
-    return UIBarButtonItem(title: "Filter",
-                           style: .plain,
-                           target: self,
-                           action: #selector(showDialog(_:)))
+  func didSelectFilter(_ category: String) {
+    EventService.filter(category, completion: self.didFetch(_:))
   }
   
-  lazy var dialog: UIAlertController = {
-    let message = "Filter events by category"
-    var alert = UIAlertController(title: message, message: nil, preferredStyle: .actionSheet)
+  lazy var filterDialog: UIAlertController = {
     
-    for type in EventType.All {
-      alert.addAction(UIAlertAction(title: type.name, style: .default) { _ in
-        let other_uri = API.getEventsUriHelper(filter: .type, type: type)
-        self.fetchData(other_uri: other_uri)
+    let alert = UIAlertController(title: "Category", message: nil, preferredStyle: .actionSheet)
+    
+    alert.addAction(UIAlertAction(title: "All", style: .default) { _ in
+      self.resetSearch()
+    })
+    
+    alert.addAction(UIAlertAction(title: "Trending", style: .default) { _ in
+      EventService.listTrending(self.didFetch(_:))
+    })
+    
+    alert.addAction(UIAlertAction(title: "Starred", style: .default) { _ in
+      EventService.listStarred(self.didFetch(_:))
+    })
+    
+    Categories.keys.forEach { category in
+      alert.addAction(UIAlertAction(title: category, style: .default) { _ in
+        if let categoryCode = Categories[category] {
+          self.didSelectFilter(categoryCode)
+        } else {
+          self.resetSearch()
+        }
       })
     }
     
+    // Set popover controller
+    alert.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
     return alert.withCancelAction()
   }()
   
+  
+  // MARK: - Search Methods
+  func resetSearch() {
+    EventService.listAll(didFetch(_:))
+  }
+  
+  func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    resetSearch()
+  }
+  
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    guard let text = searchBar.text else { return }
+    EventService.search(text, completion: self.didFetch(_:))
+  }
 }
