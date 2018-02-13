@@ -15,18 +15,32 @@ class ProfileViewController: UIViewController {
   var user: User? = nil
   var delegate: AuthDelegate? = nil
   
-    class var listSegments: [UITableViewController] {
-      return [
-        TrophyListViewController(),
-        EventListViewController()
-      ]
-    }
+  class var listSegments: [UITableViewController] {
+    return [
+      TrophyListViewController(),
+      EventListViewController()
+    ]
+  }
+  
   
   // MARK: - IB Outlets
   @IBOutlet weak var usernameLabel: UILabel!
   @IBOutlet weak var userTypeLabel: UILabel!
   @IBOutlet weak var avatarImageView: UIImageView!
   @IBOutlet var didTapAvatarGesture: UITapGestureRecognizer!
+  
+  
+  
+  //  lazy var actions: [Action] = {
+  //    return [
+  //      Action("Edit Profile", viewController: self),
+  //      Action("My Tickets", viewController: self),
+  //      Action("My Pages", viewController: self),
+  //      Action("Send Push Notification", viewController: self),
+  //      Action("Become a Judge", viewController: self)
+  //    ]
+  //  }()
+
   
   
   class func generate(delegate: AuthDelegate) -> ProfileViewController {
@@ -48,18 +62,27 @@ class ProfileViewController: UIViewController {
     
     didTapAvatarGesture.addTarget(self, action: #selector(didTapAvatar))
     
-    self.navigationItem.rightBarButtonItem = UIBarButtonItem(
-      title: "Edit", style: .plain, target: self,
-      action: #selector(viewEdit))
+    navigationItem.rightBarButtonItem = UIBarButtonItem(
+      title: "Edit", style: .plain, target: self, action: #selector(viewEdit))
     
-    self.navigationItem.leftBarButtonItem = UIBarButtonItem(
-          title: "Logout", style: .plain, target: delegate!,
-          action: #selector(AuthDelegate.goToLogin))
+    navigationItem.leftBarButtonItem = UIBarButtonItem(
+      title: "Logout", style: .plain, target: self, action: #selector(logout))
+  }
+  
+  @objc func logout() {
+    present(
+      UIAlertController(title: "Are you sure you want to logout?", message: nil, preferredStyle: .alert)
+        .withAction(UIAlertAction(title: "Yes, log me out", style: .destructive, handler: { _ in
+          self.delegate?.goToLogin()
+        }))
+        .withCancelAction(),
+      animated: true,
+      completion: nil)
   }
   
   @objc func viewEdit() {
     guard let user = self.user else {
-      print("No User"); return
+      PrinterService.error("Missing User"); return
     }
     let vc = ProfileFormViewController()
     vc.user = user
@@ -79,7 +102,7 @@ class ProfileViewController: UIViewController {
     if let user = self.user {
       usernameLabel.text = user.username
       userTypeLabel.text = user.profile.user_type
-      avatarImageView.downloadedFrom(link: user.profile.avatar)
+      avatarImageView.downloadedFrom(link: user.profile.avatar, contentMode: .scaleAspectFill)
       avatarImageView.round(corners: .allCorners, radius: avatarImageView.frame.width / 2)
     }
   }
@@ -90,7 +113,6 @@ class ProfileViewController: UIViewController {
       DispatchQueue.main.async {
         self.user = user
         self.viewWillLayoutSubviews()
-        PrinterService.log("ProfileHeader refreshed data. Try to show the profile form")
         
         if AuthService.shouldPromptProfileUpdate {
           self.viewEdit()
@@ -114,14 +136,7 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
   func imagePickerController(_ picker: UIImagePickerController,
                              didFinishPickingMediaWithInfo info: [String : Any]) {
     if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-      
-      let urlString = "\(ApiService.BaseURL)/users/avatar/"
-      ApiService.uploadImage(urlString: urlString, image: pickedImage) {
-        DispatchQueue.main.async {
-          self.avatarImageView.contentMode = .scaleAspectFill
-          self.avatarImageView.image = pickedImage
-        }
-      }
+      ApiService.uploadImage(urlString: UserService.AVATAR_URL, image: pickedImage, self.refreshData)
     }
     
     dismiss(animated: true, completion: nil)
@@ -131,14 +146,3 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
     dismiss(animated: true, completion: nil)
   }
 }
-
-
-//  lazy var actions: [Action] = {
-//    return [
-//      Action("Edit Profile", viewController: self),
-//      Action("My Tickets", viewController: self),
-//      Action("My Pages", viewController: self),
-//      Action("Send Push Notification", viewController: self),
-//      Action("Become a Judge", viewController: self)
-//    ]
-//  }()

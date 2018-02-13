@@ -14,7 +14,7 @@
 		CD26DA91200C0C9500CDBED8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD26DA90200C0C9500CDBED8 /* MainViewController.swift */; };
 		CD26DA95200C0CB800CDBED8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD26DA93200C0CB800CDBED8 /* LoginViewController.swift */; };
 		CD26DA97200C0CBF00CDBED8 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD26DA96200C0CBF00CDBED8 /* UserCell.swift */; };
-		CD26DA9C200C0CF500CDBED8 /* ProfileHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD26DA9B200C0CF500CDBED8 /* ProfileHeaderViewController.swift */; };
+		CD26DA9C200C0CF500CDBED8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD26DA9B200C0CF500CDBED8 /* ProfileViewController.swift */; };
 		CD26DA9F200C0D1200CDBED8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD26DA9E200C0D1200CDBED8 /* Constants.swift */; };
 		CD26DAA1200C0D5E00CDBED8 /* SRWebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD26DAA0200C0D5E00CDBED8 /* SRWebClient.swift */; };
 		CD26DAA4200C0DE000CDBED8 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD26DAA3200C0DE000CDBED8 /* ApiService.swift */; };
@@ -63,7 +63,7 @@
 		CD26DA90200C0C9500CDBED8 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CD26DA93200C0CB800CDBED8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CD26DA96200C0CBF00CDBED8 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
-		CD26DA9B200C0CF500CDBED8 /* ProfileHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewController.swift; sourceTree = "<group>"; };
+		CD26DA9B200C0CF500CDBED8 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CD26DA9E200C0D1200CDBED8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CD26DAA0200C0D5E00CDBED8 /* SRWebClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRWebClient.swift; sourceTree = "<group>"; };
 		CD26DAA3200C0DE000CDBED8 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 		CD26DA9A200C0CEF00CDBED8 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				CD26DA9B200C0CF500CDBED8 /* ProfileHeaderViewController.swift */,
+				CD26DA9B200C0CF500CDBED8 /* ProfileViewController.swift */,
 				CD26DABF200C5AD200CDBED8 /* ProfileFormViewController.swift */,
 			);
 			name = Profile;
@@ -506,7 +506,7 @@
 				CD26DAB1200C16F100CDBED8 /* EventCell.swift in Sources */,
 				CD5921BC1EF289950004B77B /* User.swift in Sources */,
 				CDE508B21FF60E45005A91AA /* PrinterService.swift in Sources */,
-				CD26DA9C200C0CF500CDBED8 /* ProfileHeaderViewController.swift in Sources */,
+				CD26DA9C200C0CF500CDBED8 /* ProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
