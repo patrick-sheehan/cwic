@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     navigationBarAppearance.isTranslucent = false
     navigationBarAppearance.titleTextAttributes = [
       NSAttributedStringKey.foregroundColor: Cwic.Blue,
-      NSAttributedStringKey.font: Cwic.Font.withSize(20.0)
+      NSAttributedStringKey.font: Cwic.Font.withSize(18.0)
     ]
     
     /// Configure tab bar

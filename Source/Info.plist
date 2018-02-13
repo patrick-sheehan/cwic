@@ -35,6 +35,8 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Please enable photo library access so you can upload your profile picture and share pictures from the events</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>LucidaGrandeRegular.ttf</string>

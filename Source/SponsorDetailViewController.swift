@@ -46,8 +46,9 @@ class SponsorDetailViewController: UIViewController {
         }
         
         // Sponsor logo
+        print(s)
 //        let imgLength = self.imageView.frame.width
-        self.imageView.downloadedFrom(link: s.logo)
+        self.imageView.downloadedFrom(link: s.logo, contentMode: .scaleAspectFit)
         self.imageView.round(corners: .allCorners, radius: 10)
       }
     }

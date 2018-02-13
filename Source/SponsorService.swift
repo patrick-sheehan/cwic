@@ -21,7 +21,7 @@ class SponsorService {
   }
   
   class func detail(sponsorId: Int, _ completion: @escaping (Sponsor) -> Void) {
-    let urlString = "\(SPONSORS_URL)/\(sponsorId)/"
+    let urlString = "\(ApiService.BaseURL)/sponsors/\(sponsorId)/"
     ApiService.request("GET", urlString, nil) {
       completion(Sponsor(json: $0))
     }

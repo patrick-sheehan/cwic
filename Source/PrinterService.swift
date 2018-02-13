@@ -32,7 +32,7 @@ class PrinterService {
     let entry = "\(strTags)\(msg)"
     DispatchQueue.main.async {
       LogHistory.append(entry)
-      print("[Conqube] \(entry)")
+      print("[CWIC] \(entry)")
     }
   }
   

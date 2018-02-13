@@ -11,7 +11,8 @@ import Foundation
 class UserService {
   
   static let USERS_URL = "\(ApiService.BaseURL)/users/"
-  static let COMMITTEE_MEMBERS_URL = "\(ApiService.BaseURL)/users/"
+  static let COMMITTEE_MEMBERS_URL = "\(ApiService.BaseURL)/users/?user_type=C"
+  static let AVATAR_URL = "\(ApiService.BaseURL)/users/avatar/"
   
   class var myUserId: Int? {
     get {

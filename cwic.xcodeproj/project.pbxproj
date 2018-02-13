@@ -90,6 +90,10 @@
 		CD67252C1F08A7E000680250 /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableView.swift; path = Source/UITableView.swift; sourceTree = SOURCE_ROOT; };
 		CD6725301F08ADF200680250 /* UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UINavigationController.swift; path = Source/UINavigationController.swift; sourceTree = SOURCE_ROOT; };
 		CD6725341F08BD1B00680250 /* UITabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITabBarController.swift; path = Source/UITabBarController.swift; sourceTree = SOURCE_ROOT; };
+		CD6752D52013F1D100F9EAA6 /* EventSegmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSegmentsViewController.swift; sourceTree = "<group>"; };
+		CD6752D72013F27500F9EAA6 /* StarredEventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredEventListViewController.swift; sourceTree = "<group>"; };
+		CD6752D92013F3B900F9EAA6 /* TrendingEventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingEventListViewController.swift; sourceTree = "<group>"; };
+		CD6752DD2015A66E00F9EAA6 /* CWIC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CWIC.entitlements; sourceTree = "<group>"; };
 		CD6FDB201EF1D66700C16CB5 /* SponsorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SponsorListViewController.swift; path = Source/SponsorListViewController.swift; sourceTree = SOURCE_ROOT; };
 		CD6FDB221EF1D67E00C16CB5 /* EventListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventListViewController.swift; path = Source/EventListViewController.swift; sourceTree = SOURCE_ROOT; };
 		CD6FDB281EF1D6A900C16CB5 /* Sponsor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sponsor.swift; path = Source/Sponsor.swift; sourceTree = SOURCE_ROOT; };
@@ -156,6 +160,7 @@
 		CD1D70E81EB088BE007C80CE = {
 			isa = PBXGroup;
 			children = (
+				CD6752DD2015A66E00F9EAA6 /* CWIC.entitlements */,
 				CD1D70F31EB088BE007C80CE /* Source */,
 				CD1D70F21EB088BE007C80CE /* Products */,
 				0EC4444F072D83B7B62C6B1A /* Pods */,
@@ -226,6 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				CD6FDB221EF1D67E00C16CB5 /* EventListViewController.swift */,
+				CD6752D72013F27500F9EAA6 /* StarredEventListViewController.swift */,
+				CD6752D92013F3B900F9EAA6 /* TrendingEventListViewController.swift */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -276,11 +283,19 @@
 			children = (
 				CD5921BB1EF289950004B77B /* User.swift */,
 				CD26DA96200C0CBF00CDBED8 /* UserCell.swift */,
+				CD5EF9B320114AFF001A9385 /* List */,
 				CD26DA98200C0CC600CDBED8 /* Login / Registration */,
 				CD26DA9A200C0CEF00CDBED8 /* Profile */,
-				CD5EF9B120113D7B001A9385 /* CommitteeMemberListViewController.swift */,
 			);
 			name = User;
+			sourceTree = "<group>";
+		};
+		CD5EF9B320114AFF001A9385 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				CD5EF9B120113D7B001A9385 /* CommitteeMemberListViewController.swift */,
+			);
+			name = List;
 			sourceTree = "<group>";
 		};
 		CD67252B1F08972100680250 /* Supporting Files */ = {
@@ -299,6 +314,7 @@
 			children = (
 				CD6FDB2A1EF1D6B400C16CB5 /* Event.swift */,
 				CD26DAB0200C16F100CDBED8 /* EventCell.swift */,
+				CD6752D52013F1D100F9EAA6 /* EventSegmentsViewController.swift */,
 				CD26DAB2200C1CF000CDBED8 /* Detail */,
 				CD26DAA9200C0E1700CDBED8 /* List */,
 			);
@@ -363,6 +379,11 @@
 						DevelopmentTeam = EFZ729EF85;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -471,6 +492,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD6752DA2013F3B900F9EAA6 /* TrendingEventListViewController.swift in Sources */,
 				CD26DA95200C0CB800CDBED8 /* LoginViewController.swift in Sources */,
 				CD6FDB211EF1D66700C16CB5 /* SponsorListViewController.swift in Sources */,
 				CD6FDB2B1EF1D6B400C16CB5 /* Event.swift in Sources */,
@@ -487,7 +509,9 @@
 				CD26DAB9200C1F8200CDBED8 /* SponsorCell.swift in Sources */,
 				CD67252D1F08A7E000680250 /* UITableView.swift in Sources */,
 				CD26DABB200C201700CDBED8 /* SponsorDetailViewController.swift in Sources */,
+				CD6752D82013F27500F9EAA6 /* StarredEventListViewController.swift in Sources */,
 				CD26DAC0200C5AD200CDBED8 /* ProfileFormViewController.swift in Sources */,
+				CD6752D62013F1D100F9EAA6 /* EventSegmentsViewController.swift in Sources */,
 				CD26DAAD200C140900CDBED8 /* UIView.swift in Sources */,
 				CD26DAA6200C0E0700CDBED8 /* UserService.swift in Sources */,
 				CD0F77151EFA78790091BD0C /* UIViewController.swift in Sources */,
@@ -648,6 +672,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CWIC.entitlements;
 				DEVELOPMENT_TEAM = EFZ729EF85;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -665,6 +690,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CWIC.entitlements;
 				DEVELOPMENT_TEAM = EFZ729EF85;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
