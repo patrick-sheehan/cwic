@@ -13,8 +13,8 @@ class ApiService {
   
   static var authDelegate: AuthDelegate? = nil
   
-  static let BaseURL = "http://127.0.0.1:8001"
-//  static let BaseURL = "http://cwic-env.2xzsvzeu7n.us-west-2.elasticbeanstalk.com"
+//  static let BaseURL = "http://127.0.0.1:8000"
+  static let BaseURL = "http://cwic-env.2xzsvzeu7n.us-west-2.elasticbeanstalk.com"
   
   
   /// Used for Login or Register request, saves the auth key and CSRF token
