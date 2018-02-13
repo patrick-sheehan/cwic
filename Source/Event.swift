@@ -41,8 +41,15 @@ class Event {
     self.description = json["description"] as? String ?? ""
     self.type_verbose = json["type_verbose"] as? String ?? ""
     self.image = json["image"] as? String ?? ""
-    self.position = nil
     self.is_starred = json["is_starred"] as? Bool ?? false
+    
+    if let positionJson = json["position"] as? [String: Any] {
+      self.position = Position(json: positionJson)
+      PrinterService.log("Got a position: \(self.position!)")
+    } else {
+      self.position = nil
+    }
+    
     
     if let commentsJson = json["comments"] as? [[String: Any]] {
       self.comments = commentsJson.map({ Comment(json: $0) })

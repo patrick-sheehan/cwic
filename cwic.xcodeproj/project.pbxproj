@@ -38,6 +38,9 @@
 		CD67252D1F08A7E000680250 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD67252C1F08A7E000680250 /* UITableView.swift */; };
 		CD6725311F08ADF200680250 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6725301F08ADF200680250 /* UINavigationController.swift */; };
 		CD6725351F08BD1B00680250 /* UITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6725341F08BD1B00680250 /* UITabBarController.swift */; };
+		CD6752D62013F1D100F9EAA6 /* EventSegmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6752D52013F1D100F9EAA6 /* EventSegmentsViewController.swift */; };
+		CD6752D82013F27500F9EAA6 /* StarredEventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6752D72013F27500F9EAA6 /* StarredEventListViewController.swift */; };
+		CD6752DA2013F3B900F9EAA6 /* TrendingEventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6752D92013F3B900F9EAA6 /* TrendingEventListViewController.swift */; };
 		CD6FDB211EF1D66700C16CB5 /* SponsorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB201EF1D66700C16CB5 /* SponsorListViewController.swift */; };
 		CD6FDB231EF1D67E00C16CB5 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB221EF1D67E00C16CB5 /* EventListViewController.swift */; };
 		CD6FDB291EF1D6A900C16CB5 /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FDB281EF1D6A900C16CB5 /* Sponsor.swift */; };

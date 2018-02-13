@@ -10,6 +10,11 @@ import UIKit
 
 class EventService {
   
+  static let ALL_EVENTS_URL = "\(ApiService.BaseURL)/events/"
+  static let STARRED_EVENTS_URL = "\(ApiService.BaseURL)/events/?status=starred"
+  static let TRENDING_EVENTS_URL = "\(ApiService.BaseURL)/events/?status=trending"
+  
+  
   class func list(_ url: String, _ completion: @escaping ([Event]) -> Void) {
     ApiService.request("GET", url, nil) { json in
       guard let results = json["results"] as? [[String: Any]] else {
@@ -27,18 +32,15 @@ class EventService {
   }
   
   class func listAll(_ completion: @escaping ([Event]) -> Void) {
-    let url = "\(ApiService.BaseURL)/events/"
-    list(url, completion)
+    list(ALL_EVENTS_URL, completion)
   }
   
   class func listStarred(_ completion: @escaping ([Event]) -> Void) {
-    let url = "\(ApiService.BaseURL)/events/?status=starred"
-    list(url, completion)
+    list(STARRED_EVENTS_URL, completion)
   }
   
   class func listTrending(_ completion: @escaping ([Event]) -> Void) {
-    let url = "\(ApiService.BaseURL)/events/?status=trending"
-    list(url, completion)
+    list(TRENDING_EVENTS_URL, completion)
   }
   
   class func search(_ text: String, completion: @escaping ([Event]) -> Void) {

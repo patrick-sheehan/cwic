@@ -13,8 +13,7 @@ class EventListViewController: UITableViewController, UISearchBarDelegate {
   // MARK: - Member Variables
   private let searchController = UISearchController(searchResultsController: nil)
   var events = [Event]()
-  var endpointUrl: String = "\(ApiService.BaseURL)/events/"
-
+  var endpointUrl: String = EventService.ALL_EVENTS_URL
   
   // MARK: - Networking
   func didFetch(_ events: [Event]) {
@@ -80,11 +79,7 @@ class EventListViewController: UITableViewController, UISearchBarDelegate {
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//    let vc = UIStoryboard.getViewController(.Position) as! PositionViewController
     let event = events[indexPath.row]
-//    vc.position = event.position
-//    vc.positionTitle = event.title
-//    vc.positionSubtitle = event.type_verbose
     let vc = EventDetailViewController.generate(eventId: event.id)
     navigationController?.pushViewController(vc, animated: true)
   }

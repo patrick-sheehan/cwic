@@ -14,30 +14,9 @@ class EventDetailViewController: UIViewController {
   var eventId: Int = 0
   var event: Event? = nil
   
-  
-  struct EventAction {
-    let name: String
-    
-    func perform(_ vc: EventDetailViewController) {
-      if name == "View Location of Event" {
-        vc.viewLocation()
-      } else if name == "Star this Event" {
-        vc.toggleStar()
-      } else {
-        print("TODO")
-      }
-    }
-  }
-  
-  var actions: [EventAction] = [
-    EventAction(name: "View Location of Event"),
-    EventAction(name: "Star this Event"),
-    EventAction(name: "Upload a picture of this Event"),
-    EventAction(name: "Share this Event")
-  ]
-  
-  
+
   // MARK: - IB Outlets
+  @IBOutlet weak var headerView: UIView!
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var creatorAvatarImageView: UIImageView!
   @IBOutlet weak var titleLabel: UILabel!
@@ -60,6 +39,8 @@ class EventDetailViewController: UIViewController {
   // MARK: - View Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    title = "Event"
     
     tableView.dataSource = self
     tableView.delegate = self
@@ -86,11 +67,10 @@ class EventDetailViewController: UIViewController {
         self.titleLabel.text = e.title
         self.subtitleLabel.text = e.type_verbose
         self.tableView.reloadData()
-        self.imageView.downloadedFrom(link: e.image)
+        self.imageView.downloadedFrom(link: e.image, contentMode: .scaleAspectFit)
         self.starButton.isSelected = e.is_starred
       }
     }
-    
   }
   
   
@@ -158,3 +138,28 @@ extension EventDetailViewController: UITableViewDataSource, UITableViewDelegate 
     return "Comments"
   }
 }
+
+
+
+//  struct EventAction {
+//    let name: String
+//
+//    func perform(_ vc: EventDetailViewController) {
+//      if name == "View Location of Event" {
+//        vc.viewLocation()
+//      } else if name == "Star this Event" {
+//        vc.toggleStar()
+//      } else {
+//        print("TODO")
+//      }
+//    }
+//  }
+
+//  var actions: [EventAction] = [
+//    EventAction(name: "View Location of Event"),
+//    EventAction(name: "Star this Event"),
+//    EventAction(name: "Upload a picture of this Event"),
+//    EventAction(name: "Share this Event")
+//  ]
+
+

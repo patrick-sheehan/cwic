@@ -32,7 +32,7 @@ class MainViewController: UITabBarController {
     
     viewControllers = [
       UINavigationController("About", TabImages.About, AboutCwicViewController.generate()),
-      UINavigationController("Events", TabImages.Events, EventListViewController()),
+      UINavigationController("Events", TabImages.Events, EventSegmentsViewController.generate()),
       UINavigationController("Sponsors", TabImages.Sponsors, SponsorListViewController()),
       UINavigationController("Profile", TabImages.Profile, ProfileViewController.generate(delegate: self)),
     ]
